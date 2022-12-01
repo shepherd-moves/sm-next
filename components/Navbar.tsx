@@ -52,9 +52,12 @@ function Navbar() {
           <li>
             <Link href="/terms">Terms of Service</Link>
           </li>
-          <button className="bg-white text-black font-semibold px-4 py-2 rounded-lg">
+          <Link
+            href="/quote"
+            className="bg-white text-black font-semibold px-4 py-2 rounded-lg"
+          >
             Get a Quote
-          </button>
+          </Link>
         </ul>
         <button className="md:hidden">
           {isOpen ? (
