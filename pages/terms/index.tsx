@@ -93,7 +93,7 @@ function TermsOfService() {
         </div>
         {terms.map((term) => (
           <div key={term.title}>
-            <h3 className="text-black text-l lg:text-xl mt-8 font-bold text-left mb-4 md:mb-6">
+            <h3 className="text-black text-l lg:text-xl mt-8 font-bold  mb-4 md:mb-6 text-left">
               {term.title}
             </h3>
             <p className="max-w-screen-md text-black md:text-lg text-left mx-auto">
