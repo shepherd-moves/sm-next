@@ -19,7 +19,6 @@ function Quote() {
         </div>
         <Iframe
           url="https://app.onexfort.com/quote/230/210"
-          id=""
           className="w-full h-[70vh]"
           display="block"
           position="relative"
