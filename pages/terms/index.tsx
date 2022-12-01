@@ -92,7 +92,7 @@ function TermsOfService() {
           </p>
         </div>
         {terms.map((term) => (
-          <div>
+          <div key={term.title}>
             <h3 className="text-gray-800 text-l lg:text-xl mt-8 font-bold text-left mb-4 md:mb-6">
               {term.title}
             </h3>

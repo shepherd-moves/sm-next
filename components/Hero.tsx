@@ -3,7 +3,7 @@ import React from "react";
 function Hero() {
   return (
     <>
-      <section className="min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden shadow-lg  relative py-16 md:py-16 xl:py-30">
+      <section className="min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden   relative py-16 md:py-16 xl:py-30">
         <img
           src="/sm-hero-bg.jpg"
           loading="lazy"

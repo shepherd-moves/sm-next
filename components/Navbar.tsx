@@ -42,7 +42,7 @@ function Navbar() {
           className="h-[150px] w-[100px]"
           alt="Tuckshop"
         />
-        <ul className=" hidden md:flex gap-2 text-l font-semibold text-inter text-white capitalize">
+        <ul className=" hidden md:flex gap-2 text-l font-semibold text-inter text-white capitalize items-center">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -52,6 +52,9 @@ function Navbar() {
           <li>
             <Link href="/terms">Terms of Service</Link>
           </li>
+          <button className="bg-white text-black font-semibold px-4 py-2 rounded-lg">
+            Get a Quote
+          </button>
         </ul>
         <button className="md:hidden">
           {isOpen ? (
