@@ -54,11 +54,11 @@ export default function Home() {
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <div className="mb-10 md:mb-16">
-            <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
+            <h2 className="text-black text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
               Our Services
             </h2>
 
-            <p className="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">
+            <p className="max-w-screen-md text-black md:text-lg text-center mx-auto">
               Shepherd Moves offers a wide range of moving services for every
               time of move including Residential Homes and Apartments, House
               Staging and Styling, Office Relocations, Warehouse Relocations and
@@ -69,11 +69,11 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16">
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col items-center">
-                <feature.icon className="text-4xl text-gray-800 mb-4" />
+                <feature.icon className="text-4xl text-black mb-4" />
                 <h3 className="text-lg md:text-xl font-semibold text-center mb-2">
                   {feature.name}
                 </h3>
-                <p className="text-gray-500 text-center mb-2 line-clamp-2">
+                <p className="text-black text-center mb-2 line-clamp-2">
                   {feature.description}
                 </p>
                 <a href="#" className="text-black font-bold">
