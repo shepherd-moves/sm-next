@@ -15,7 +15,7 @@ function Hero() {
         <div className="bg-white mix-blend-normal opacity-75 absolute inset-0"></div>
         <div className="sm:max-w-2xl flex flex-col items-center relative p-4 ">
           <img src="/sm-logo-black.svg" className="w-[80%] mb-4"></img>
-          <h3 className=" text-center md:text-2xl font-bold mb-4">
+          <h3 className="text-black text-center md:text-2xl font-bold mb-4">
             Your Leading Moving Providers in Victoria, Australia
           </h3>
           <div className="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
@@ -28,7 +28,7 @@ function Hero() {
 
             <Link
               href="/about"
-              className="inline-block bg-white hover:bg-black hover:text-white focus-visible:ring ring-indigo-300 text-blac text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
+              className=" text-black inline-block bg-white hover:bg-black hover:text-white focus-visible:ring ring-indigo-300 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
             >
               Learn More
             </Link>

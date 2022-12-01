@@ -73,11 +73,11 @@ function ServiceBlock() {
                         aria-hidden="true"
                       />
                     </div>
-                    <p className=" text-black ml-16 text-lg font-medium leading-6 text-nav_primary">
+                    <p className=" text-black ml-16 text-lg font-medium leading-6 ">
                       {feature.name}
                     </p>
                   </dt>
-                  <dd className="text-black mt-2 ml-16 text-base text-nav_primary">
+                  <dd className="text-black mt-2 ml-16 text-base ">
                     {feature.description}
                   </dd>
                 </div>
