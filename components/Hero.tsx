@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -18,19 +19,19 @@ function Hero() {
             Your Leading Moving Providers in Victoria, Australia
           </h3>
           <div className="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
-            <a
+            <Link
               href="/quote"
               className="inline-block bg-black hover:bg-white hover:text-black focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
             >
               Get a Quote
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/about"
               className="inline-block bg-white hover:bg-black hover:text-white focus-visible:ring ring-indigo-300 text-blac text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </section>
