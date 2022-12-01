@@ -88,7 +88,7 @@ function About() {
     <>
       {/*About Section*/}
       <section>
-        <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+        <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
           <div className="flex flex-col gap-10 lg:flex-row justify-between ">
             <div className="w-full lg:w-8/12 ">
               <img
@@ -98,10 +98,10 @@ function About() {
               />
             </div>
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
-              <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">
+              <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-black pb-4">
                 About Us
               </h1>
-              <p className="font-normal text-base leading-6 text-gray-600 ">
+              <p className="font-normal text-base leading-6 text-black ">
                 Based in the bustling city of Melbourne, we are a moving company
                 committed to bringing a sense of calm to a situation many find
                 stressful. You can put your feet up, sit back, and relax, safe
@@ -121,7 +121,7 @@ function About() {
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <div className="flex flex-col lg:flex- items-center mb-4 md:mb-8">
-            <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-2 lg:mb-0">
+            <h2 className="text-black text-2xl lg:text-3xl font-bold text-center mb-2 lg:mb-0">
               Our Trusted Partners
             </h2>
           </div>
@@ -473,11 +473,11 @@ function About() {
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <div className="mb-10 md:mb-16">
-            <h2 className="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
+            <h2 className="text-black text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
               Frequently Asked Questions
             </h2>
 
-            <p className="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">
+            <p className="max-w-screen-md text-black md:text-lg text-center mx-auto">
               This is a section of some simple filler text, also known as
               placeholder text. It shares some characteristics of a real written
               text but is random or otherwise generated.
