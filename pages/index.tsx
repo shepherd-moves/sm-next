@@ -70,9 +70,9 @@ export default function Home() {
             {features.map((feature) => (
               <div key={feature.name} className="flex flex-col items-center">
                 <feature.icon className="text-4xl text-black mb-4" />
-                <h3 className="text-lg md:text-xl font-semibold text-center mb-2">
+                <p className="text-lg md:text-xl font-semibold text-center mb-2">
                   {feature.name}
-                </h3>
+                </p>
                 <p className="text-black text-center mb-2 line-clamp-2">
                   {feature.description}
                 </p>

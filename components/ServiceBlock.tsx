@@ -67,7 +67,7 @@ function ServiceBlock() {
               {features.map((feature) => (
                 <div key={feature.name} className="relative">
                   <dt>
-                    <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-body_primary text-white">
+                    <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-body_primary">
                       <feature.icon
                         className="h-6 w-6 fill-black"
                         aria-hidden="true"
