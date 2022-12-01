@@ -77,11 +77,11 @@ function TermsOfService() {
   return (
     <>
       <div className="bg-white flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
-        <h2 className="text-gray-800 text-2xl lg:text-3xl mt-8 font-bold text-center mb-4 md:mb-6">
+        <h2 className="text-black text-2xl lg:text-3xl mt-8 font-bold text-center mb-4 md:mb-6">
           Terms of Services
         </h2>
         <div>
-          <p className="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">
+          <p className="max-w-screen-md text-black md:text-lg text-center mx-auto">
             At Shepherd Moves we are committed to making your move as easy as
             possible. We have therefore designed a short-hand version of our
             terms and conditions which make it easy for our clients to
@@ -93,10 +93,10 @@ function TermsOfService() {
         </div>
         {terms.map((term) => (
           <div key={term.title}>
-            <h3 className="text-gray-800 text-l lg:text-xl mt-8 font-bold text-left mb-4 md:mb-6">
+            <h3 className="text-black text-l lg:text-xl mt-8 font-bold text-left mb-4 md:mb-6">
               {term.title}
             </h3>
-            <p className="max-w-screen-md text-gray-500 md:text-lg text-left mx-auto">
+            <p className="max-w-screen-md text-black md:text-lg text-left mx-auto">
               {term.description.map((desc) => (
                 <>
                   <p>{desc}</p>
@@ -108,7 +108,7 @@ function TermsOfService() {
         ))}
         <div className="flex justify-center">
           <button
-            className="btn mb-6 bg-black "
+            className="btn mb-6 bg-black text-white "
             onClick={() => {
               window.open("/sm-tos-latest.pdf", "_blank");
             }}
