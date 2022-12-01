@@ -68,7 +68,7 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16">
             {features.map((feature) => (
-              <div className="flex flex-col items-center">
+              <div key={feature.name} className="flex flex-col items-center">
                 <feature.icon className="text-4xl text-gray-800 mb-4" />
                 <h3 className="text-lg md:text-xl font-semibold text-center mb-2">
                   {feature.name}
