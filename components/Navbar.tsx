@@ -6,9 +6,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 
 const links = [
-  { name: "Home", to: "#", id: 1 },
-  { name: "About Us", to: "#", id: 2 },
-  { name: "Terms of Service", to: "#", id: 3 },
+  { name: "Home", to: "/", id: 1 },
+  { name: "About Us", to: "/about", id: 2 },
+  { name: "Terms of Service", to: "/terms", id: 3 },
 ];
 const itemVariants = {
   closed: {
