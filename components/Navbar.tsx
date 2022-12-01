@@ -9,6 +9,7 @@ const links = [
   { name: "Home", to: "/", id: 1 },
   { name: "About Us", to: "/about", id: 2 },
   { name: "Terms of Service", to: "/terms", id: 3 },
+  { name: "Quote", to: "/quote", id: 4 },
 ];
 const itemVariants = {
   closed: {
