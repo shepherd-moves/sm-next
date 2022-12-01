@@ -63,7 +63,7 @@ function ServiceBlock() {
             </p>
           </div>
           <div className="mt-10">
-            <dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
+            <dl className=" text-black space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
               {features.map((feature) => (
                 <div key={feature.name} className="relative">
                   <dt>
