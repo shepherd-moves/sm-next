@@ -51,11 +51,11 @@ function ServiceBlock() {
       <div className="bg-white py-12 flex" id="about">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex-col">
           <div className="lg:text-center">
-            <h2 className="text-2xl font-semibold text-body_primary text-center">
+            <h2 className=" text-black text-2xl font-semibold text-body_primary text-center">
               Our Services
             </h2>
 
-            <p className="mt-4 max-w-2xl text-xl text-body_primary text-center md:mx-auto">
+            <p className="text-black mt-4 max-w-2xl text-xl text-body_primary text-center md:mx-auto">
               Shepherd Moves offers a wide range of moving services for every
               time of move including Residential Homes and Apartments, House
               Staging and Styling, Office Relocations, Warehouse Relocations and
@@ -73,11 +73,11 @@ function ServiceBlock() {
                         aria-hidden="true"
                       />
                     </div>
-                    <p className="ml-16 text-lg font-medium leading-6 text-nav_primary">
+                    <p className=" text-black ml-16 text-lg font-medium leading-6 text-nav_primary">
                       {feature.name}
                     </p>
                   </dt>
-                  <dd className="mt-2 ml-16 text-base text-nav_primary">
+                  <dd className="text-black mt-2 ml-16 text-base text-nav_primary">
                     {feature.description}
                   </dd>
                 </div>
