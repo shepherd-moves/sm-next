@@ -12,11 +12,9 @@ function Racking() {
           <ReactCompareSlider
             className="w-[633px] h-[400px] object-cover rounded-lg"
             itemOne={
-              <ReactCompareSliderImage src="/warehouse-before.jpg" alt="one" />
+              <ReactCompareSliderImage src="/wh-before.jpeg" alt="one" />
             }
-            itemTwo={
-              <ReactCompareSliderImage src="/warehouse-after.jpg" alt="two" />
-            }
+            itemTwo={<ReactCompareSliderImage src="/wh-after.jpeg" alt="two" />}
             style={{
               display: "flex",
               width: "100%",
