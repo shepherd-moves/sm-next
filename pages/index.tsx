@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Hero from "../components/Hero";
+import Link from "next/link";
 import { AiFillHome } from "react-icons/ai";
 import { HiOfficeBuilding } from "react-icons/hi";
 import { FaWarehouse, FaMapMarkedAlt } from "react-icons/fa";
@@ -10,9 +11,9 @@ import { BsBookshelf } from "react-icons/bs";
 
 const features = [
   {
-    name: "Residental Homes and Apartments",
+    name: "Residential Homes and Apartments",
     description:
-      "Shepherd Moves started with residential moves. Our team has the skills and equipment to ensure your possessions are delivered carefully and in a timely manner.",
+      "Shepherd Moves started out with residential moves. Our team has built the skills and equipment to ensure your valuable possessions are delivered carefully and in a timely manner. At shepherd moves we always go above and beyond and promise to go the extra mile to ensure our customers are satisfied. We pride ourselves on making moving as stress free and easy as possible! Weather you’re moving from an apartment or a home we have you covered. With many different services available we have you covered.",
     icon: AiFillHome,
   },
   {
@@ -76,9 +77,14 @@ export default function Home() {
                 <p className="text-black text-center mb-2 line-clamp-2">
                   {feature.description}
                 </p>
-                <a href="#" className="text-black font-bold">
+                <Link
+                  href={`our-services/${feature.name
+                    .replace(/\s/g, "-")
+                    .toLowerCase()}`}
+                  className="text-black font-bold"
+                >
                   More
-                </a>
+                </Link>
               </div>
             ))}
           </div>
