@@ -76,7 +76,7 @@ const terms = [
 function TermsOfService() {
   return (
     <>
-      <div className="bg-white flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
+      <div className=" p-8 sm:bg-white flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
         <h2 className="text-black text-2xl lg:text-3xl mt-8 font-bold text-center mb-4 md:mb-6">
           Terms of Services
         </h2>

@@ -19,14 +19,3 @@ body{
         color: #fff;
         filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4); 
 }
-
-@media (max-width: 480px) {
-    .pulse-icon {
-      display: block;
-    }
-  }
-  
-  /* Hide the icon on larger screens */
-  .pulse-icon {
-    display: none;
-  }

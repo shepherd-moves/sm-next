@@ -4,7 +4,7 @@ import Iframe from "react-iframe";
 function Quote() {
   return (
     <>
-      <div className=" flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
+      <div className=" p-4 sm:flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
         <h2 className="text-black text-2xl lg:text-3xl mt-8 font-bold text-center mb-4 md:mb-6">
           Get a Quote
         </h2>

@@ -141,8 +141,8 @@ function About() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 rounded-lg gap-4 lg:gap-6">
-            <div className=" h-16 sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
+          <div className="grid gap-6 md:grid-cols-4 rounded-lg md:gap-4 lg:gap-6">
+            <div className=" h-24 sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
               <Link href="https://www.delicatedays.com.au/">
                 <svg
                   width="230"
@@ -227,7 +227,7 @@ function About() {
               </Link>
             </div>
 
-            <div className="h-16 sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
+            <div className="h-24 sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
               <Link href="https://www.petersadlerremovals.com.au/">
                 <svg
                   width="327"
@@ -375,7 +375,7 @@ function About() {
               </Link>
             </div>
 
-            <div className="h-16 sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
+            <div className="h-24sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
               <Link href="https://www.instagram.com/sable_styling/">
                 <svg
                   width="336"
@@ -436,7 +436,7 @@ function About() {
               </Link>
             </div>
 
-            <div className="h-16 sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
+            <div className="h-24 sm:h-32 flex justify-center items-center bg-gray-100 text-gray-400 rounded-lg p-4">
               <Link href="https://www.treeandtribe.com.au/">
                 <svg
                   width="314"

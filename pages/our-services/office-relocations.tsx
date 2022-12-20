@@ -20,7 +20,7 @@ function Office() {
       <div className="flex flex-col gap-10 lg:flex-row justify-between ">
         <div className="w-full lg:w-8/12 ">
           <img
-            className="w-[633px] h-[400px] object-cover rounded-lg"
+            className="object-contain  md:w-[633px] h-[400px] md:object-cover md:rounded-lg"
             src="/office-hero.jpg"
             alt="Man standing beside a truck"
           />
