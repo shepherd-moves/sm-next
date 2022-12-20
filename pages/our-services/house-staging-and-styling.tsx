@@ -1,4 +1,18 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
+
+const services = [
+  {
+    name: "Experience working with multiple home staging and styling companies",
+  },
+  {
+    name: "Careful packing and unpacking to prevent damage to furniture",
+  },
+  {
+    name: "Customized solutions for every project, from single pieces to entire homes",
+  },
+  // Additional services...
+];
 
 function Staging() {
   return (
@@ -23,6 +37,18 @@ function Staging() {
             your moving needs. From warehouse management to pickup and staging,
             we are your one stop shop for your staging needs.
           </p>
+          <ul className="list-none mt-4 leading-tight">
+            {services.map((service) => (
+              <li key={service.name} className="mb-6">
+                <h3 className="font-semibold text-lg text-black">
+                  <span className="text-black inline-block">
+                    <FaCheck></FaCheck>
+                  </span>{" "}
+                  {service.name}
+                </h3>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

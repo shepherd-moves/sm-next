@@ -1,4 +1,18 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
+
+const services = [
+  {
+    name: "Provides specialized services for office moves of any size and distance",
+  },
+  {
+    name: "Specialized equipment and techniques for handling fragile and bulky items, such as computers and filing cabinets",
+  },
+  {
+    name: "Flexible scheduling and competitive pricing to minimize disruption to the workplace",
+  },
+  // Additional services...
+];
 
 function Office() {
   return (
@@ -25,6 +39,18 @@ function Office() {
             contact one of our amazing staff to help you with your next office
             move.
           </p>
+          <ul className="list-none mt-4 leading-tight">
+            {services.map((service) => (
+              <li key={service.name} className="mb-6">
+                <h3 className="font-semibold text-lg text-black">
+                  <span className="text-black inline-block">
+                    <FaCheck></FaCheck>
+                  </span>{" "}
+                  {service.name}
+                </h3>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

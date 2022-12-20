@@ -1,6 +1,7 @@
 import React from "react";
 import ReactBeforeSliderComponent from "react-before-after-slider-component";
 import "react-before-after-slider-component/dist/build.css";
+import { FaCheck } from "react-icons/fa";
 
 const FIRST_IMAGE = {
   imageUrl: "/about-hero.png",
@@ -16,6 +17,19 @@ const delimiterIconStyles = {
   borderRadius: "none",
   backgroundImage: "url(<some-path-here>)",
 };
+
+const services = [
+  {
+    name: "Experienced and reliable team members who are trained in the proper handling of household items",
+  },
+  {
+    name: "Flexible scheduling and competitive pricing for residential moves",
+  },
+  {
+    name: "Provides a wide range of services to make the moving process stress-free and efficient",
+  },
+  // Additional services...
+];
 
 function Residential() {
   return (
@@ -42,6 +56,18 @@ function Residential() {
             from an apartment or a home we have you covered. With many different
             services available we have you covered
           </p>
+          <ul className="list-none mt-4 leading-tight">
+            {services.map((service) => (
+              <li key={service.name} className="mb-6">
+                <h3 className="font-semibold text-lg text-black">
+                  <span className="text-black inline-block">
+                    <FaCheck></FaCheck>
+                  </span>{" "}
+                  {service.name}
+                </h3>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

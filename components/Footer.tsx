@@ -1,5 +1,27 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { FaTiktok, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const PulseIcon = () => {
+  return (
+    <motion.svg
+      className="pulse-icon"
+      animate={{ scale: [1, 1.2, 1] }}
+      transition={{ duration: 2, ease: "easeInOut" }}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {/* Add your SVG icon content here */}
+      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+    </motion.svg>
+  );
+};
 
 function Footer() {
   return (
@@ -110,10 +132,16 @@ function Footer() {
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              className="fill-current "
+              className="mobile-only fill-current hover:fill-[#4267B2] "
             >
               <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
             </svg>
+          </Link>
+          <Link href={"https://www.tiktok.com/@shepherdmoves"}>
+            <FaTiktok className=" tiktok-btn w-[24px] h-[24px]" />
+          </Link>
+          <Link href={"https://www.instagram.com/shepherdmoves/"}>
+            <FaInstagram className="insta-btn w-[24px] h-[24px]" />
           </Link>
         </div>
       </div>

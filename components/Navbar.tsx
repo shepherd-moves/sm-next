@@ -35,80 +35,131 @@ const sideVariants = {
 function Navbar() {
   const [open, cycleOpen] = useCycle(false, true);
   const [isOpen, setIsOpen] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
+
   return (
-    <nav className="bg-black">
-      <div className="flex justify-between items-center h-24 max-w-5xl mx-auto px-4">
-        <img
-          src="/sm-logo-white.svg"
-          className="h-[150px] w-[100px]"
-          alt="Tuckshop"
-        />
-        <ul className=" hidden md:flex gap-2 text-l font-semibold text-inter text-white capitalize items-center">
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/about">About Us</Link>
-          </li>
-          <li>
-            <Link href="/terms">Terms of Service</Link>
-          </li>
-          <Link
-            href="/quote"
-            className="bg-white text-black font-semibold px-4 py-2 rounded-lg"
+    <>
+      {showBanner && (
+        <div className="flex flex-wrap sm:flex-nowrap sm:justify-center sm:items-center bg-white relative sm:gap-3 px-4 sm:pr-8 ms:px-8 py-3">
+          <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-black text-sm md:text-base mb-2 sm:mb-0">
+            Beginning in March, we will be offering storage services for your
+            convenience.
+          </div>
+          <a
+            href="#"
+            className="order-last sm:order-none w-full sm:w-auto inline-block bg-black focus-visible:ring ring-indigo-300 text-white text-xs md:text-sm font-semibold text-center whitespace-nowrap rounded-lg outline-none transition duration-100 px-4 py-2"
           >
-            Get a Quote
-          </Link>
-        </ul>
-        <button className="md:hidden">
-          {isOpen ? (
-            <AiOutlineClose
-              className="fill-white"
-              onClick={() => setIsOpen(!isOpen)}
-            />
-          ) : (
-            <FaBars className="fill-white" onClick={() => setIsOpen(!isOpen)} />
-          )}
-        </button>
-      </div>
-      <div className="flex md:hidden">
-        <AnimatePresence>
-          {isOpen && (
-            <motion.aside
-              initial={{ width: 0 }}
-              animate={{
-                width: 300,
-              }}
-              exit={{
-                width: 0,
-                transition: { delay: 0.7, duration: 0.3 },
-              }}
-              className="bg-white w-[auto] h-[100vh]"
+            Find out more
+          </a>
+
+          <div className="order-2 sm:order-none w-1/12 sm:w-auto flex justify-end items-start sm:absolute sm:right-0 sm:mr-1 xl:mr-3">
+            <button
+              type="button"
+              className="text-black hover:text-indigo-100 active:text-indigo-200 transition duration-100"
+              onClick={() => setShowBanner(false)}
             >
-              <motion.div
-                className="container mt-[4.5rem] mb-[4.5rem] ml-[1.4rem] mr-[1.4rem]"
-                initial="closed"
-                animate="open"
-                exit="closed"
-                variants={sideVariants}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 md:w-6 h-5 md:h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                {links.map(({ name, to, id }) => (
-                  <motion.a
-                    key={id}
-                    href={to}
-                    whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
-                    className="text-black decoration-none text-[1.75rem] font-bold block m-[20px]"
-                  >
-                    {name}
-                  </motion.a>
-                ))}
-              </motion.div>
-            </motion.aside>
-          )}
-        </AnimatePresence>
-      </div>
-    </nav>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+
+      <nav className="bg-black">
+        <div className="flex justify-between items-center h-24 max-w-5xl mx-auto px-4">
+          <Link href="/">
+            <img
+              src="/sm-logo-white.svg"
+              className="h-[150px] w-[100px]"
+              alt="Tuckshop"
+            />
+          </Link>
+          <ul className="main-nav hidden md:flex gap-2 text-l font-semibold text-inter text-white capitalize items-center">
+            <li className="">
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/#services">Services</Link>
+            </li>
+            <li>
+              <Link href="/terms">Terms of Service</Link>
+            </li>
+
+            <Link
+              href="/quote"
+              className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-200 ease-in-out"
+            >
+              Get a Quote
+            </Link>
+          </ul>
+          <button className="md:hidden">
+            {isOpen ? (
+              <AiOutlineClose
+                className="fill-white"
+                onClick={() => setIsOpen(!isOpen)}
+              />
+            ) : (
+              <FaBars
+                className="fill-white"
+                onClick={() => setIsOpen(!isOpen)}
+              />
+            )}
+          </button>
+        </div>
+        <div className="flex md:hidden">
+          <AnimatePresence>
+            {isOpen && (
+              <motion.aside
+                initial={{ width: 0 }}
+                animate={{
+                  width: 300,
+                }}
+                exit={{
+                  width: 0,
+                  transition: { delay: 0.7, duration: 0.3 },
+                }}
+                className="bg-white w-[auto] h-[100vh]"
+              >
+                <motion.div
+                  className="container mt-[4.5rem] mb-[4.5rem] ml-[1.4rem] mr-[1.4rem]"
+                  initial="closed"
+                  animate="open"
+                  exit="closed"
+                  variants={sideVariants}
+                >
+                  {links.map(({ name, to, id }) => (
+                    <motion.a
+                      key={id}
+                      href={to}
+                      whileHover={{ scale: 1.1 }}
+                      variants={itemVariants}
+                      className="text-black decoration-none text-[1.75rem] font-bold block m-[20px]"
+                    >
+                      {name}
+                    </motion.a>
+                  ))}
+                </motion.div>
+              </motion.aside>
+            )}
+          </AnimatePresence>
+        </div>
+      </nav>
+    </>
   );
 }
 

@@ -1,4 +1,18 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
+
+const services = [
+  {
+    name: "Experienced team members who are familiar with the logistics and regulations of interstate travel",
+  },
+  {
+    name: "Safe and secure transportation of belongings, including the use of protective materials and proper loading techniques",
+  },
+  {
+    name: "Provides specialized services for interstate moves within Australia",
+  },
+  // Additional services...
+];
 
 function Interstate() {
   return (
@@ -24,6 +38,18 @@ function Interstate() {
             contact one of our amazing staff to help you with your next office
             move.
           </p>
+          <ul className="list-none mt-4 leading-tight">
+            {services.map((service) => (
+              <li key={service.name} className="mb-6">
+                <h3 className="font-semibold text-lg text-black">
+                  <span className="text-black inline-block">
+                    <FaCheck></FaCheck>
+                  </span>{" "}
+                  {service.name}
+                </h3>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

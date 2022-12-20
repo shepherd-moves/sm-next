@@ -4,6 +4,21 @@ import {
   ReactCompareSliderImage,
 } from "react-compare-slider";
 
+import { FaCheck } from "react-icons/fa";
+
+const services = [
+  {
+    name: "Provides a wide range of racking solutions for warehouses, distribution centers, and other commercial spaces",
+  },
+  {
+    name: "Customizable racking options to accommodate any size and type of space",
+  },
+  {
+    name: "High-quality racking materials and designs to ensure durability and safety",
+  },
+  // Additional services...
+];
+
 function Racking() {
   return (
     <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
@@ -34,6 +49,18 @@ function Racking() {
             information please don’t hesitate to contact one of our amazing
             staff to help you with your next office move.
           </p>
+          <ul className="list-none mt-4 leading-tight">
+            {services.map((service) => (
+              <li key={service.name} className="mb-6">
+                <h3 className="font-semibold text-lg text-black">
+                  <span className="text-black inline-block">
+                    <FaCheck></FaCheck>
+                  </span>{" "}
+                  {service.name}
+                </h3>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
