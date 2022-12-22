@@ -1,4 +1,5 @@
-import React from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
 const services = [
@@ -15,6 +16,14 @@ const services = [
 ];
 
 function Interstate() {
+  const [relatedServices, setRelatedServices] = useState([
+    "Residential Homes and Apartments",
+    "House Staging and Styling",
+    "Office Relocations",
+    "Warehouse Relocations",
+    "Racking Solutions",
+  ]);
+
   return (
     <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
       <div className="flex flex-col gap-10 lg:flex-row justify-between ">
@@ -50,6 +59,24 @@ function Interstate() {
               </li>
             ))}
           </ul>
+          <div className="flex">
+            <div className="">
+              {" "}
+              <h4>Related Services:</h4>
+              <ul className="flex">
+                {relatedServices.map((service) => (
+                  <li key={service}>
+                    <Link
+                      href={`${service.replace(/\s/g, "-").toLowerCase()}`}
+                      className="text-black font-semibold text-sm line-height-2.5 mr-4 hover:text-gray-500"
+                    >
+                      {service}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

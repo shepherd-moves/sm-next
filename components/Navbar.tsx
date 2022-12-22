@@ -8,8 +8,10 @@ import { FaBars } from "react-icons/fa";
 const links = [
   { name: "Home", to: "/", id: 1 },
   { name: "About Us", to: "/about", id: 2 },
-  { name: "Terms of Service", to: "/terms", id: 3 },
-  { name: "Quote", to: "/quote", id: 4 },
+  { name: "Services", to: "/#services", id: 3 },
+  { name: "Contact", to: "/contact-us", id: 4 },
+  { name: "Terms of Service", to: "/terms", id: 5 },
+  { name: "Quote", to: "/quote", id: 6 },
 ];
 const itemVariants = {
   closed: {
@@ -43,14 +45,43 @@ function Navbar() {
         <div className="flex flex-wrap sm:flex-nowrap sm:justify-center sm:items-center bg-white relative sm:gap-3 px-4 sm:pr-8 ms:px-8 py-3">
           <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-black text-sm md:text-base mb-2 sm:mb-0">
             Beginning in March, we will be offering storage services for your
-            convenience.
+            convenience in our new store and warehouse!
           </div>
-          <a
-            href="#"
-            className="order-last sm:order-none w-full sm:w-auto inline-block bg-black focus-visible:ring ring-indigo-300 text-white text-xs md:text-sm font-semibold text-center whitespace-nowrap rounded-lg outline-none transition duration-100 px-4 py-2"
+          {/* The button to open modal */}
+          <label
+            htmlFor="my-modal"
+            className="storage-btn order-last sm:order-none w-full sm:w-auto inline-block bg-black focus-visible:ring ring-indigo-300 text-white text-xs md:text-sm font-semibold text-center whitespace-nowrap rounded-lg outline-none transition duration-100 px-4 py-2"
           >
-            Find out more
-          </a>
+            Find out more!
+          </label>
+
+          {/* Put this part before </body> tag */}
+          <input type="checkbox" id="my-modal" className="modal-toggle" />
+          <div className="modal">
+            <div className="modal-box">
+              <h3 className="font-bold text-lg">
+                Shepherd Moves Storage Services 📦
+              </h3>
+              <p className="py-4">
+                From March 1st, we will be offering storage services for your
+                convenience. We will be able to store your items in a secure
+                facility managed by our team. Rest assured that your items will
+                be safe and secure with us.
+                <br />
+                <br />
+                You will also be able to buy packing supplies from our store
+                located in the same facility!
+              </p>
+              <div className="modal-action">
+                <label
+                  htmlFor="my-modal"
+                  className="storage-btn order-last sm:order-none w-full sm:w-auto inline-block bg-black focus-visible:ring ring-indigo-300 text-white text-xs md:text-sm font-semibold text-center whitespace-nowrap rounded-lg outline-none transition duration-100 px-4 py-2"
+                >
+                  Got it.
+                </label>
+              </div>
+            </div>
+          </div>
 
           <div className="order-2 sm:order-none w-1/12 sm:w-auto flex justify-end items-start sm:absolute sm:right-0 sm:mr-1 xl:mr-3">
             <button
@@ -95,6 +126,9 @@ function Navbar() {
             </li>
             <li>
               <Link href="/#services">Services</Link>
+            </li>
+            <li>
+              <Link href="/contact-us">Contact</Link>
             </li>
             <li>
               <Link href="/terms">Terms of Service</Link>

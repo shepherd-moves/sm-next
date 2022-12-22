@@ -8,10 +8,13 @@ const services = [
     name: "Experienced and reliable team members who are trained in the proper handling of household items",
   },
   {
-    name: "Flexible scheduling and competitive pricing for residential moves",
+    name: "Flexible scheduling and competitive pricing for residential removals",
   },
   {
     name: "Provides a wide range of services to make the moving process stress-free and efficient",
+  },
+  {
+    name: "We can supply all the packing materials you need to ensure your items are packed safely and securely",
   },
   // Additional services...
 ];
@@ -62,6 +65,24 @@ function Residential() {
                 </li>
               ))}
             </ul>
+            <div className="flex">
+              <div className="">
+                {" "}
+                <h4>Related Services:</h4>
+                <ul className="flex">
+                  {relatedServices.map((service) => (
+                    <li key={service}>
+                      <Link
+                        href={`${service.replace(/\s/g, "-").toLowerCase()}`}
+                        className="text-black font-semibold text-sm line-height-2.5 mr-4 hover:text-gray-500"
+                      >
+                        {service}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
