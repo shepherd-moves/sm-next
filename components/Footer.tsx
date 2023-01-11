@@ -9,6 +9,8 @@ function Footer() {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
+    const element = document.querySelector("#my-element");
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         setShowButton(entry.isIntersecting);

@@ -91,7 +91,7 @@ function About() {
     <>
       {/*About Section*/}
       <section>
-        <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+        <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 lg:grid">
           <div className="flex flex-col gap-10 lg:flex-row justify-between ">
             <div className="w-full lg:w-8/12 ">
               <img
@@ -138,11 +138,11 @@ function About() {
         </h2>
 
         {/*Tree and Tribe */}
-        <div className="sm:h-40 grid grid-cols-2 md:grid-cols-4 sm:content-evenly bg-gray-100 rounded-lg gap-6 p-6">
+        <div className="grid bg-gray-100 rounded-lg gap-6 p-6 h-60 grid-cols-1 sm:content-evenly sm:h-40 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 md:gap-6 ">
           <div className="flex justify-center text-indigo-500">
             <Link href="https://www.treeandtribe.com.au/">
               <svg
-                className="w-auto h-6 sm:h-8 lg:h-10"
+                className="w-auto h-6 sm:h-8 lg:h-9"
                 width="314"
                 height="48"
                 viewBox="0 0 314 48"
@@ -165,7 +165,7 @@ function About() {
           <div className="flex justify-center text-indigo-500">
             <Link href="https://www.instagram.com/sable_styling/">
               <svg
-                className="w-auto h-6 sm:h-8 lg:h-10"
+                className="w-auto h-6 sm:h-8 lg:h-8"
                 width="336"
                 height="50"
                 viewBox="0 0 336 50"
@@ -228,6 +228,7 @@ function About() {
           <div className="flex justify-center text-indigo-500">
             <Link href="https://www.delicatedays.com.au/">
               <svg
+                className="w-auto h-6 sm:h-8 lg:h-9"
                 width="221"
                 height="37"
                 viewBox="0 0 221 37"
@@ -294,7 +295,7 @@ function About() {
           <div className="flex justify-center text-indigo-500">
             <Link href="https://www.petersadlerremovals.com.au/">
               <svg
-                className="w-auto h-6 sm:h-8 lg:h-10"
+                className="w-auto h-6 sm:h-6 lg:h-8"
                 width="327"
                 height="48"
                 viewBox="0 0 327 48"

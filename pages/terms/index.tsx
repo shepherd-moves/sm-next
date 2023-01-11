@@ -110,7 +110,10 @@ function TermsOfService() {
           <button
             className="btn mb-6 bg-black text-white "
             onClick={() => {
-              window.open("/sm-tos-latest.pdf", "_blank");
+              window.open(
+                "/Shepherd-Moves-Terms-Of-Service-2023.pdf",
+                "_blank"
+              );
             }}
           >
             Full Terms of Service
