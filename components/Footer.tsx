@@ -5,23 +5,42 @@ import { FaTiktok, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function Footer() {
-  const footerRef = useRef(null);
+  const footerRef = useRef<HTMLInputElement>(null);
   const [showButton, setShowButton] = useState(false);
 
+  // useEffect(() => {
+  //   const element = document.querySelector("#my-element");
+
+  //   if ("IntersectionObserver" in window) {
+  //     const observer = new IntersectionObserver((entries) => {
+  //       entries.forEach((entry) => {
+  //         setShowButton(entry.isIntersecting);
+  //       });
+  //     });
+  //     observer.observe(footerRef.current);
+
+  //     return () => {
+  //       observer.disconnect();
+  //     };
+  //   } else {
+  //   }
+  // }, []);
+
+  function handleScroll() {
+    const element = footerRef.current;
+    if (element) {
+      const isVisible =
+        element.getBoundingClientRect().top < window.innerHeight;
+      setShowButton(isVisible);
+    }
+  }
+
   useEffect(() => {
-    const element = document.querySelector("#my-element");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        setShowButton(entry.isIntersecting);
-      });
-    });
-    observer.observe(footerRef.current);
-
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [footerRef]);
 
   return (
     <>
