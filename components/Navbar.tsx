@@ -11,7 +11,9 @@ const links = [
   { name: "Services", to: "/#services", id: 3 },
   { name: "Contact", to: "/contact-us", id: 4 },
   { name: "Terms of Service", to: "/terms", id: 5 },
-  { name: "Quote", to: "/quote", id: 6 },
+  { name: "Packing Materials", to: "/packing-materials", id: 6 },
+  { name: "Careers", to: "https://forms.gle/TznAnNDDNkqhscCn8", id: 7 },
+  { name: "Quote", to: "/quote", id: 8 },
 ];
 const itemVariants = {
   closed: {

@@ -171,7 +171,7 @@ function Footer() {
           <Link href={"https://jordyn.vercel.app/"}>
             Website created with ❤️ by Jordan Nelson
           </Link>
-          <div className="flex gap-2">
+          {/* <div className="md:flex md:bg-red gap-2">
             <Link className="" href="/">
               Home
             </Link>
@@ -181,9 +181,9 @@ function Footer() {
             <Link href="/quote">Quote</Link>
             <Link href="/packing-materials">Packing Materials</Link>
             <Link href="https://forms.gle/TznAnNDDNkqhscCn8">Careers</Link>
-          </div>
+          </div> */}
         </div>
-        <div className="flex  justify-center sm:flex sm:justify-end">
+        <div className="flex justify-center sm:flex sm:justify-end">
           <Link href="https://greenfleet.net/">
             <Image
               src="/gf-supporting-logo.png"
