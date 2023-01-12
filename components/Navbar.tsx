@@ -133,6 +133,9 @@ function Navbar() {
             <li>
               <Link href="/terms">Terms of Service</Link>
             </li>
+            <li>
+              <Link href="/packing-materials">Packing Materials</Link>
+            </li>
 
             <Link
               href="/quote"

@@ -172,7 +172,7 @@ const PackingMaterials = () => {
               <img
                 src={item.image}
                 loading="lazy"
-                alt="Photo by Austin Wade"
+                alt={item.title}
                 className="w-full h-full object-cover scale-50 object-center group-hover:scale-110 transition duration-500 ease-in-out"
               />
 
