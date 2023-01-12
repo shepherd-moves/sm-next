@@ -171,6 +171,17 @@ function Footer() {
           <Link href={"https://jordyn.vercel.app/"}>
             Website created with ❤️ by Jordan Nelson
           </Link>
+          <div className="flex gap-2">
+            <Link className="" href="/">
+              Home
+            </Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/contact-us">Contact</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/quote">Quote</Link>
+            <Link href="/packing-materials">Packing Materials</Link>
+            <Link href="https://forms.gle/TznAnNDDNkqhscCn8">Careers</Link>
+          </div>
         </div>
         <div className="flex  justify-center sm:flex sm:justify-end">
           <Link href="https://greenfleet.net/">

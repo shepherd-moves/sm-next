@@ -18,7 +18,7 @@ const data = [
   {
     id: 3,
     title: "What happens to my deposit on cancelled or delayed jobs?",
-    info: "Deposits are non-refundable before 24 hours of the booked moving time. If the job is delayed due to unforeseen circumstances e.g., positive covid tests, personal or medical reasons. In these cases, the deposit is transferred to a new date without any extra charges.",
+    info: "Deposits are non-refundable before 48 hours of the booked moving time. If the job is delayed due to unforeseen circumstances e.g., positive covid tests, personal or medical reasons. In these cases, the deposit is transferred to a new date without any extra charges.",
   },
   {
     id: 4,
@@ -34,13 +34,13 @@ const data = [
   {
     id: 6,
     title: "What could make my move take longer than the estimated time?",
-    info: "Common factors include; having more items than originally listed in your inventory list, having furniture that needs to be disassembled and assembled, not having an elevator booking for apartment moves, longer than expected access to either property from the truck, traffic and weather conditions. INVERT THIS POG (what can I do to ensure my move goes as smooth as possible?)",
+    info: "Common factors include; having more items than originally listed in your inventory list, having furniture that needs to be disassembled and assembled, not having an elevator booking for apartment moves, longer than expected access to either property from the truck, traffic and weather conditions.",
   },
   {
     id: 7,
     title:
       "I’m only moving 1 item, is there a lower fee for much smaller moves?",
-    info: "Unfortunately no. We have a set minimum cost that is strictly observed.",
+    info: "15-minute increments are more accurate and the price reflects better for the work our teams complete. We try not to be like other companies that over-charge for their services.",
   },
   {
     id: 8,
@@ -66,17 +66,17 @@ const data = [
     id: 12,
     title:
       "Can you transport Pianos? Are there any extra charges for moving pianos?",
-    info: "We transport pianos. If pianos need to be moved, it MUST be disclosed to us prior to the moving day. Depending on the weight of the piano and where is must be moved from and to, we may require extra team members to relocate it safely",
+    info: "We can transport specific pianos, and yes there is an extra charge. We only transport upright pianos. Anything larger than an upright piano is too susceptible to damages. When booking a job, let us know if you need a piano moved and we can let you know the options.",
   },
   {
     id: 13,
     title: "How do you safely transport Artwork?",
-    info: "Artwork is wrapped in our moving blankets, and especially delicate pieces of art can be cling wrapped for extra protection at the discretion of the team members on the day.",
+    info: "Artwork is wrapped in our heavy duty moving blankets to ensure safety during transit. For particularly delicate pieces of art, we recommend using specific packing materials that we can supply if necessary.",
   },
   {
     id: 14,
     title: "What days are best for moving?",
-    info: "Between Monday and Friday we have a standard rate, while on Satudays and Sundays we charge a little more. In terms of time, the earlier it is, the better. Try book your move for first thing in the morning so our guys are rested and ready to move.",
+    info: "During the working week is the best time for a move. Between Monday and Friday, we have a lower rate than Saturdays and again on Sundays. In terms of time, the earlier in the day it is, the better. Having your move completed earlier in the day gives you the peace of mind you’ll need to get a good night sleep in your new home.",
   },
   {
     id: 15,
@@ -467,6 +467,25 @@ function About() {
                   ></AccordionItem>
                 );
               })}
+            </div>
+            <div className="mt-2">
+              <p>
+                Please see our full{" "}
+                <span>
+                  <button
+                    className="font-bold"
+                    onClick={() => {
+                      window.open(
+                        "/Shepherd-Moves-Terms-Of-Service-2023.pdf",
+                        "_blank"
+                      );
+                    }}
+                  >
+                    Terms of Service
+                  </button>
+                </span>{" "}
+                for a detailed explanation
+              </p>
             </div>
           </section>
         </div>
