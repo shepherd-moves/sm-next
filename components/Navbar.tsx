@@ -63,14 +63,17 @@ function Navbar() {
                 Shepherd Moves Storage Services 📦
               </h3>
               <p className="py-4">
-                From March 1st, we will be offering storage services for your
+                From mid February, we will be offering storage services for your
                 convenience. We will be able to store your items in a secure
                 facility managed by our team. Rest assured that your items will
                 be safe and secure with us.
                 <br />
                 <br />
-                You will also be able to buy packing supplies from our store
-                located in the same facility!
+                You will also be able to buy{" "}
+                <Link href="/packing-materials" className="font-bold">
+                  packing supplies
+                </Link>{" "}
+                from our store located in the same facility!
               </p>
               <div className="modal-action">
                 <label
