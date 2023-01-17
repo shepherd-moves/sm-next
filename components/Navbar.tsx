@@ -41,7 +41,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
   const [showSubmenu, setShowSubmenu] = useState(false);
-  const submenuRef = useRef(null);
+  const submenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const node = submenuRef.current;
