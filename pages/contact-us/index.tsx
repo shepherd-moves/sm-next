@@ -17,7 +17,7 @@ function ContactUs() {
   const onSubmit = (e: any) => {
     try {
       e.preventDefault();
-      send("service_64kuzdw", "template_5jsmzw4", toSend, "JrfCW-7CJGoztm__9")
+      send("service_f7oe4rl", "template_hwubheh", toSend, "gRnK3AGwVX7bWtekX")
         .then((response) => {
           setSubmitted(true);
           console.log("SUCCESS!", response.status, response.text);
@@ -57,13 +57,6 @@ function ContactUs() {
             <h1 className="text-lg font-bold">Email</h1>
             <p className="text-sm">bookings@shepherdmoves.com.au</p>
           </div>
-          <Image
-            src="/sm_maps.png"
-            width={600}
-            height={400}
-            className="rounded-lg mt-8"
-            alt="Image of Shepherd Moves office location on Google Maps"
-          ></Image>
         </div>
       ) : (
         <div className=" p-8 sm:bg-white flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
@@ -193,16 +186,15 @@ function ContactUs() {
               <span className="text-gray-500 text-sm">*Required</span>
             </div>
           </form>
-
-          <Image
-            src="/sm_maps.png"
-            width={600}
-            height={400}
-            className="rounded-lg mt-8"
-            alt="Image of Shepherd Moves office location on Google Maps"
-          ></Image>
         </div>
       )}
+      <div className="flex justify-center items-center">
+        <img
+          src="/sm_maps.png"
+          className=" w-[95%] mb-8 rounded-lg mt-8"
+          alt="Image of Shepherd Moves office location on Google Maps"
+        ></img>
+      </div>
     </>
   );
 }

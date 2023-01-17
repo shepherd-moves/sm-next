@@ -42,7 +42,7 @@ const packingMaterials = [
     size: "1500x100",
     used: false,
     image: "packing-materials/bubble-wrap.jpg",
-    price: "$2.60 p/meter",
+    price: "$2.80 p/meter",
   },
   {
     title: "Kraft Bubble (for canvas artwork) ",
@@ -77,14 +77,14 @@ const packingMaterials = [
     size: "",
     used: false,
     image: "packing-materials/single-mattress-cover.png",
-    price: "$7.00 each",
+    price: "$9.00 each",
   },
   {
     title: "King Bed Mattress Cover",
     size: "",
     used: false,
     image: "packing-materials/single-mattress-cover.png",
-    price: "$16.20 Each",
+    price: "$16.20 each",
   },
   {
     title: "Floor Protection – Ram Board",
@@ -105,14 +105,14 @@ const packingMaterials = [
     size: "",
     used: false,
     image: "packing-materials/tape-gun.png",
-    price: "$25.00 Each",
+    price: "$25.00 each",
   },
   {
     title: "Quilted Removalist Blanket",
     size: "",
     used: false,
     image: "packing-materials/blanket.png",
-    price: "$17.00 each",
+    price: "$20.00 each",
   },
   {
     title: "Stretch Wrap (100mm x 300m x 20um)",
@@ -140,7 +140,14 @@ const packingMaterials = [
     size: "",
     used: false,
     image: "packing-materials/drawer-liner.jpg",
-    price: "$18.00 Each",
+    price: "$18.00 each",
+  },
+  {
+    title: "Fragile Tape",
+    size: "",
+    used: false,
+    image: "packing-materials/fragile-tape.avif",
+    price: "$4.00 each",
   },
 ];
 
@@ -165,15 +172,12 @@ const PackingMaterials = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8">
         {packingMaterials.map((item) => (
           <div>
-            <a
-              href="#"
-              className="group h-80 block bg-white rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3"
-            >
+            <a className="group h-80 block bg-white rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
               <img
                 src={item.image}
                 loading="lazy"
                 alt={item.title}
-                className="w-full h-full object-cover scale-50 object-center group-hover:scale-110 transition duration-500 ease-in-out"
+                className="w-full h-full object-cover scale-50 object-center group-hover:scale-90 transition duration-500 ease-in-out"
               />
 
               <div className="flex gap-2 absolute left-0 bottom-2">
@@ -188,12 +192,9 @@ const PackingMaterials = () => {
 
             <div className="flex justify-between items-start gap-2 px-2">
               <div className="flex flex-col">
-                <a
-                  href="#"
-                  className="text-gray-800 hover:text-gray-500 text-lg lg:text-xl font-bold transition duration-100"
-                >
+                <p className="text-gray-800 text-lg lg:text-xl font-bold transition duration-100">
                   {item.title}
-                </a>
+                </p>
               </div>
 
               <div className="flex flex-col items-end">

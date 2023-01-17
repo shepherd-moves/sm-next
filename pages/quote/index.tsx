@@ -11,10 +11,10 @@ function Quote() {
         <div>
           <p className="max-w-screen-md text-black md:text-lg text-left mx-auto">
             Follow the steps in the form below by filling out as much detailed
-            information as possible. A quote will then be generated and sent to
-            you via e-mail. If you have any quetions regarding this, feel free
-            to contact us during business hours and we'll be happy to answer
-            them!
+            information as possible. Once we receive your information, we will
+            reach out with the next steps to help get you moving. If you have
+            any quetions regarding this, feel free to contact us during business
+            hours and we'll be happy to answer them!
           </p>
         </div>
         <Iframe

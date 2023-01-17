@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion, useCycle, AnimatePresence } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
@@ -40,14 +40,33 @@ function Navbar() {
   const [open, cycleOpen] = useCycle(false, true);
   const [isOpen, setIsOpen] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
+  const [showSubmenu, setShowSubmenu] = useState(false);
+  const submenuRef = useRef(null);
+
+  useEffect(() => {
+    const node = submenuRef.current;
+    if (node) {
+      node.addEventListener("mouseenter", () => setShowSubmenu(true));
+      node.addEventListener("mouseleave", () => setShowSubmenu(false));
+    }
+    return () => {
+      if (node) {
+        node.removeEventListener("mouseenter", () => setShowSubmenu(true));
+        node.removeEventListener("mouseleave", () => setShowSubmenu(false));
+      }
+    };
+  }, []);
 
   return (
     <>
       {showBanner && (
         <div className="flex flex-wrap sm:flex-nowrap sm:justify-center sm:items-center bg-white relative sm:gap-3 px-4 sm:pr-8 ms:px-8 py-3">
           <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-black text-sm md:text-base mb-2 sm:mb-0">
-            Beginning in March, we will be offering storage services for your
-            convenience in our new store and warehouse!
+            <p className="text-center">
+              Beginning in mid February, we will be offering storage services
+              for your convenience in our new store and warehouse in Glen
+              Huntley!
+            </p>
           </div>
           {/* The button to open modal */}
           <label
@@ -129,8 +148,59 @@ function Navbar() {
             <li>
               <Link href="/about">About Us</Link>
             </li>
-            <li>
-              <Link href="/#services">Services</Link>
+            <li className="relative">
+              <Link
+                className=""
+                onMouseEnter={() => setShowSubmenu(true)}
+                href="/#service"
+              >
+                <button disabled={showSubmenu}>Services</button>
+              </Link>
+              {showSubmenu && (
+                <div
+                  ref={submenuRef}
+                  className="absolute z-10 bg-white rounded-md py-2 shadow-md"
+                  onMouseEnter={() => setShowSubmenu(true)}
+                  onMouseLeave={() => setShowSubmenu(false)}
+                >
+                  <Link
+                    className="block w-[250px] px-4 py-2 text-black hover:bg-gray-200"
+                    href="/our-services/residential-homes-and-apartments"
+                  >
+                    Residential Homes and Apartments
+                  </Link>
+                  <Link
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                    href="/our-services/house-staging-and-styling"
+                  >
+                    House Staging and Styling
+                  </Link>
+                  <Link
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                    href="/our-services/office-relocations"
+                  >
+                    Office Relocations
+                  </Link>
+                  <Link
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                    href="/our-services/warehouse-relocations"
+                  >
+                    Warehouse Relocations
+                  </Link>
+                  <Link
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                    href="/our-services/interstate-relocations"
+                  >
+                    Interstate Relocations
+                  </Link>
+                  <Link
+                    className="block px-4 py-2 text-black hover:bg-gray-200"
+                    href="/our-services/racking-solutions"
+                  >
+                    Racking Solutions
+                  </Link>
+                </div>
+              )}
             </li>
             <li>
               <Link href="/contact-us">Contact</Link>
