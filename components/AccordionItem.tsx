@@ -6,7 +6,10 @@ function AccordionItem({ title, info }: any) {
   const [showInfo, setShowInfo] = useState(false);
   return (
     <div className="border-b">
-      <div className="flex justify-between text-black hover:text-gray-500 active:text-black cursor-pointer gap-2 py-4">
+      <div
+        onClick={() => setShowInfo(!showInfo)}
+        className="flex justify-between text-black hover:text-gray-500 active:text-black cursor-pointer gap-2 py-4"
+      >
         <span className="md:text-lg font-semibold transition duration-100">
           {title}
         </span>

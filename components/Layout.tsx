@@ -1,14 +1,21 @@
-import React from "react";
+import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Link from "next/link";
 
 function Layout({ children }: any) {
+  const router = useRouter();
+  const showLayout = !router.pathname.startsWith("/studio");
+
   return (
     <>
-      <Navbar />
-      {children}
-      <Footer />
+      {showLayout && (
+        <>
+          <Navbar />
+          {children}
+          <Footer />
+        </>
+      )}
+      {!showLayout && children}
     </>
   );
 }
