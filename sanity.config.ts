@@ -6,7 +6,7 @@ import StudioNavbar from './components/StudioNavbar'
 import { myTheme } from './theme'
 
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!;
+const projectId = "vi9mlibn";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!;
 
 export default defineConfig({
