@@ -75,32 +75,9 @@ function Hero() {
                 href="/quote"
                 className=" items-center inline-block bg-black hover:bg-white hover:text-black focus-visible:ring  text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
               >
-                Get a Quote
+                Get an Estimate!
               </Link>
             </motion.div>
-
-            {/* <motion.div
-              animate={{
-                opacity: 1,
-              }}
-              initial={{
-                opacity: 0,
-              }}
-              style={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-              }}
-            >
-              <Link
-                href="/about"
-                className=" text-black inline-block bg-white hover:bg-black hover:text-white focus-visible:ring ring-indigo-300 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
-              >
-                Learn More
-              </Link>
-            </motion.div> */}
           </div>
         </div>
       </section>
