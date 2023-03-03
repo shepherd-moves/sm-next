@@ -63,9 +63,8 @@ function Navbar() {
         <div className="flex flex-wrap sm:flex-nowrap sm:justify-center sm:items-center bg-white relative sm:gap-3 px-4 sm:pr-8 ms:px-8 py-3">
           <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-black text-sm md:text-base mb-2 sm:mb-0">
             <p className="text-center">
-              Beginning in mid February, we will be offering storage services
-              for your convenience in our new store and warehouse in Glen
-              Huntley!
+              We are now offering storage services for your convenience in our
+              new store and warehouse at <strong>1072 Glen Huntly Road!</strong>
             </p>
           </div>
           {/* The button to open modal */}
@@ -84,10 +83,9 @@ function Navbar() {
                 Shepherd Moves Storage Services 📦
               </h3>
               <p className="py-4">
-                From mid February, we will be offering storage services for your
-                convenience. We will be able to store your items in a secure
-                facility managed by our team. Rest assured that your items will
-                be safe and secure with us.
+                We are now offering storage services for your convenience. We
+                can store your items in a secure facility managed by our team.
+                Rest assured that your items will be safe and secure with us.
                 <br />
                 <br />
                 You will also be able to buy{" "}
@@ -216,7 +214,7 @@ function Navbar() {
               href="/quote"
               className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-200 ease-in-out"
             >
-              Get a Quote
+              Get an Estimate!
             </Link>
           </ul>
           <button className="md:hidden">
