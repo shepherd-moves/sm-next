@@ -19,34 +19,38 @@ export const RichTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => {
-      return <ul className="ml-10 py-5 list-disc space-y-5">{children}</ul>;
-    },
-    number: ({ children }: any) => {
-      return <ol className="mt-lg list-decimal">{children}</ol>;
+      return (
+        <ul className="list-disc list-inside text-gray-500 sm:text-lg mb-6 md:mb-8">
+          {children}
+        </ul>
+      );
     },
   },
   block: {
     h1: ({ children }: any) => {
-      return <h1 className="text-3xl font-bold">{children}</h1>;
+      return (
+        <h1 className="text-gray-800  text-2xl sm:text-3xl font-bold text-center mb-4 md:mb-6">
+          {children}
+        </h1>
+      );
     },
     h2: ({ children }: any) => {
-      return <h2 className="text-2xl font-bold">{children}</h2>;
+      return (
+        <h2 className="text-gray-800 text-xl sm:text-2xl font-semibold mb-2 md:mb-4">
+          {children}
+        </h2>
+      );
     },
     h3: ({ children }: any) => {
-      return <h3 className="text-1xl font-bold">{children}</h3>;
+      return <h3 className="text-xl font-bold">{children}</h3>;
     },
     h4: ({ children }: any) => {
-      return <h4 className="text-1xl font-bold">{children}</h4>;
+      return <h4 className="text-xl font-bold">{children}</h4>;
     },
     h5: ({ children }: any) => {
-      return <h5 className="text-1xl font-bold">{children}</h5>;
+      return <h5 className="text-xl font-bold">{children}</h5>;
     },
-    h6: ({ children }: any) => {
-      return <h6 className="text-1xl font-bold">{children}</h6>;
-    },
-    p: ({ children }: any) => {
-      return <p className="text-lg">{children}</p>;
-    },
+    h6: ({ children }: any) => {},
     blockquote: ({ children }: any) => {
       return (
         <blockquote className="border-l-4 border-gray-200 pl-4">
@@ -58,7 +62,7 @@ export const RichTextComponents = {
       return <code className="bg-gray-200 p-2 rounded">{children}</code>;
     },
     normal: ({ children }: any) => {
-      return <p className="text-lg">{children}</p>;
+      return <p className="sm:text-lg mb-6 md:mb-8">{children}</p>;
     },
   },
   marks: {
