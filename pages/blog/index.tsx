@@ -97,11 +97,10 @@ export async function getStaticProps() {
 }
 
 function Blog({ posts }: Props) {
-  console.log(posts);
   return (
     <div className="grid p-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
       {posts.map((post) => (
-        <div className="flex flex-col bg-white border rounded-lg overflow-hidden">
+        <div className="flex flex-col bg-white border rounded-lg overflow-hidden shadow-xl">
           <a
             href={`/blog/post/${post.slug.current}`}
             className="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative"

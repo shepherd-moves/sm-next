@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Hero from "../components/Hero";
 import Link from "next/link";
+import Reviews from "../components/Reviews";
+import axios from "axios";
 import { AiFillHome } from "react-icons/ai";
 import { HiOfficeBuilding } from "react-icons/hi";
 import { FaWarehouse, FaMapMarkedAlt } from "react-icons/fa";
@@ -49,12 +51,30 @@ const features = [
   },
 ];
 
-export default function Home() {
+const GOOGLE_API_KEY = "AIzaSyDt9aFzrMucATh-hCzgmkkDjRQJ-U0MJ0M";
+const PLACE_ID = "ChIJW8oShdlD1moRrA7T7ruG9Yg";
+
+export async function getStaticProps() {
+  const config = {
+    method: "get",
+    url: `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,formatted_address,review&key=${GOOGLE_API_KEY}&sort=recent`,
+    headers: {},
+  };
+  const res = await axios(config);
+  console.log(res);
+  return {
+    props: {
+      reviews: res.data,
+    },
+  };
+}
+
+export default function Home({ reviews }: any) {
   return (
     <div>
       <Hero />
       <div className="bg-white py-6 sm:py-8 lg:py-12">
-        <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
+        <div className="max-w-screen-2xl px-4 md:px-8 mx-auto ">
           <div className="mb-10 md:mb-16">
             <h2 className="text-black text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
               Our Services
@@ -98,6 +118,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <Reviews reviews={reviews} />
       </div>
     </div>
   );
