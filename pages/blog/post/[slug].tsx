@@ -85,6 +85,7 @@ function BlogPost({ post }: any) {
         <PortableText
           key={index}
           value={block}
+          // @ts-ignore
           components={RichTextComponents}
         />
       ))}
