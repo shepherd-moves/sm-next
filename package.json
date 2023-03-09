@@ -21,7 +21,7 @@
     "emailjs-com": "^3.2.0",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
-    "framer-motion": "^7.6.15",
+    "framer-motion": "^7.10.3",
     "next": "13.0.5",
     "next-sanity": "^4.1.5",
     "nodemailer": "^6.8.0",

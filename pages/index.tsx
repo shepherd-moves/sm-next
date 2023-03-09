@@ -20,7 +20,7 @@ const features = [
     icon: AiFillHome,
   },
   {
-    name: "House Staging and Styling",
+    name: "House Staging",
     description:
       "We have worked with multiple staging companies since our inception. We pride ourselves on the extra care we take to ensure the staged properties are utterly perfect.",
     icon: GiBedLamp,
