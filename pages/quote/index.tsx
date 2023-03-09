@@ -6,7 +6,7 @@ function Quote() {
     <>
       <div className=" p-4 sm:flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
         <h2 className="text-black text-2xl lg:text-3xl mt-8 font-bold text-center mb-4 md:mb-6">
-          Get an Estimate
+          Get an Estimate Today!
         </h2>
         <div>
           <p className="max-w-screen-md text-black md:text-lg text-left mx-auto">
