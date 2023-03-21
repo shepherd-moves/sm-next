@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaTiktok, FaInstagram } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 function Footer() {
   const footerRef = useRef<HTMLInputElement>(null);
@@ -95,7 +94,7 @@ function Footer() {
               Website created with ❤️ by Jordan Nelson
             </Link>
           </div>
-          <div className="flex justify-center mt-[-50px]">
+          <div className="flex justify-center mt-[-30px]">
             <Link href="https://greenfleet.net/">
               <Image
                 src="/gf-supporting-logo.png"
