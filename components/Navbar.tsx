@@ -64,7 +64,8 @@ function Navbar() {
           <div className="order-1 sm:order-none w-11/12 sm:w-auto max-w-screen-sm inline-block text-black text-sm md:text-base mb-2 sm:mb-0">
             <p className="text-center">
               We are now offering storage services for your convenience in our
-              new store and warehouse at <strong>1072 Glen Huntly Road!</strong>
+              new store and warehouse at{" "}
+              <strong>11 Carroll Crescent, Glen Iris</strong>
             </p>
           </div>
           {/* The button to open modal */}
