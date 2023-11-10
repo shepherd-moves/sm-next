@@ -39,36 +39,42 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-b gap-4 py-6">
           <nav className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-6">
             <Link
+              aria-label="Go to About page button"
               href="/about"
               className="text-white hover:text-gray-300 active:text-indigo-600 transition duration-100"
             >
               About Us
             </Link>
             <Link
+              aria-label="Go to Services page button"
               href="/#services"
               className="text-white hover:text-gray-300 active:text-indigo-600 transition duration-100"
             >
               Services
             </Link>
             <Link
+              aria-label="Go to Contact Us page button"
               href="/contact-us"
               className="text-white hover:text-gray-300 active:text-indigo-600 transition duration-100"
             >
               Contact
             </Link>
             <Link
+              aria-label="go to Terms of Service page button"
               href="/terms"
               className="text-white hover:text-gray-300 active:text-indigo-600 transition duration-100"
             >
               Terms of Service
             </Link>
             <Link
+              aria-label="Go to Packing Materials page button"
               href="/packing-materials"
               className="text-white hover:text-gray-300 active:text-indigo-600 transition duration-100"
             >
               Packing Materials
             </Link>
             <Link
+              aria-label="Go to Blog page button"
               href="/blog"
               className="text-white hover:text-gray-300 active:text-indigo-600 transition duration-100"
             ></Link>
@@ -104,12 +110,18 @@ function Footer() {
         </div>
         <div className="flex-col mt-4">
           <div className="text-white text-md text-center mb-4">
-            <Link href={"https://jordyn.vercel.app/"}>
+            <Link
+              aria-label="Go to Jordan Nelson's portfolio site"
+              href={"https://jordyn.vercel.app/"}
+            >
               Website created with ❤️ by Jordan Nelson
             </Link>
           </div>
           <div className="flex justify-center mt-[-30px]">
-            <Link href="https://greenfleet.net/">
+            <Link
+              aria-label="Go to Greenfleet's website"
+              href="https://greenfleet.net/"
+            >
               <Image
                 src="/gf-supporting-logo.png"
                 width={200}

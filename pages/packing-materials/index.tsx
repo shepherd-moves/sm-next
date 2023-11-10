@@ -367,7 +367,11 @@ const PackingMaterials = () => {
 
           <p className="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">
             We have a range of packing materials available for purchase. Please
-            <Link href="/contact-us" className="font-bold">
+            <Link
+              aria-label="Go to Contact Us page"
+              href="/contact-us"
+              className="font-bold"
+            >
               {" "}
               contact
             </Link>{" "}

@@ -80,6 +80,9 @@ function Interstate() {
                   {relatedServices.map((service) => (
                     <li key={service}>
                       <Link
+                        aria-label={`Go to ${service
+                          .replace(/\s/g, "-")
+                          .toLowerCase()} page`}
                         href={`${service.replace(/\s/g, "-").toLowerCase()}`}
                         className="text-black font-semibold text-sm line-height-2.5 mr-4 hover:text-gray-500"
                       >

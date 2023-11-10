@@ -84,6 +84,7 @@ function Hero() {
               }}
             >
               <Link
+                aria-label="Go to Get a Quote page"
                 href="/quote"
                 className=" items-center inline-block bg-black hover:bg-white hover:text-black focus-visible:ring  text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
               >

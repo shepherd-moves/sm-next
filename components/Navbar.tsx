@@ -112,7 +112,11 @@ function Navbar() {
                 <br />
                 <br />
                 You will also be able to buy{" "}
-                <Link href="/packing-materials" className="font-bold">
+                <Link
+                  aria-label="Go to Paking Materials page"
+                  href="/packing-materials"
+                  className="font-bold"
+                >
                   packing supplies
                 </Link>{" "}
                 from our store located in the same facility!
@@ -156,7 +160,7 @@ function Navbar() {
 
       <nav className="bg-black">
         <div className="flex justify-between items-center h-24 max-w-5xl mx-auto px-4">
-          <Link href="/">
+          <Link aria-label="Shepherd Moves logo in white" href="/">
             <Image
               src="/sm-logo-white.svg"
               width={150}
@@ -188,13 +192,18 @@ function Navbar() {
 
           <ul className="main-nav hidden md:flex gap-2 text-l font-semibold text-inter text-white capitalize items-center">
             <li className="">
-              <Link href="/">Home</Link>
+              <Link aria-label="Go to Home page" href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link aria-label="Go to About Us page" href="/about">
+                About Us
+              </Link>
             </li>
             <li className="relative">
               <Link
+                aria-label="Link to show Services submenu"
                 className=""
                 onMouseEnter={() => setShowSubmenu(true)}
                 href="/#service"
@@ -209,36 +218,42 @@ function Navbar() {
                   onMouseLeave={() => setShowSubmenu(false)}
                 >
                   <Link
+                    aria-label="Go to Residential Homes and Apartments page"
                     className="block w-[250px] px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/residential-homes-and-apartments"
                   >
                     Residential Homes and Apartments
                   </Link>
                   <Link
+                    aria-label="Go to House Staging and Styling page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/house-staging-and-styling"
                   >
                     House Staging and Styling
                   </Link>
                   <Link
+                    aria-label="Go to Office Relocations page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/office-relocations"
                   >
                     Office Relocations
                   </Link>
                   <Link
+                    aria-label="Go to Warehouse Relocations page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/warehouse-relocations"
                   >
                     Warehouse Relocations
                   </Link>
                   <Link
+                    aria-label="Go to Interstate Relocations page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/interstate-relocations"
                   >
                     Interstate Relocations
                   </Link>
                   <Link
+                    aria-label="Go to Racking Solutions page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/racking-solutions"
                   >
@@ -248,16 +263,26 @@ function Navbar() {
               )}
             </li>
             <li>
-              <Link href="/contact-us">Contact</Link>
+              <Link aria-label="Go to Contact Us page" href="/contact-us">
+                Contact
+              </Link>
             </li>
             <li>
-              <Link href="/terms">Terms of Service</Link>
+              <Link aria-label="Go to Terms of Service page" href="/terms">
+                Terms of Service
+              </Link>
             </li>
             <li>
-              <Link href="/packing-materials">Packing Materials</Link>
+              <Link
+                aria-label="Go to Packing Materials page"
+                href="/packing-materials"
+              >
+                Packing Materials
+              </Link>
             </li>
 
             <Link
+              aria-label="Go to Quote page"
               href="/quote"
               className="bg-red-500 text-white font-semibold px-4 py-6 rounded-lg hover:bg-red-700 transition duration-200 ease-in-out"
             >
