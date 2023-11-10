@@ -396,7 +396,11 @@ const PackingMaterials = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8">
             {packingMaterials.map((item) => (
               <div>
-                <a className="group h-80 block bg-white rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
+                <Link
+                  href=""
+                  aria-label={item.title}
+                  className="group h-80 block bg-white rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3"
+                >
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -411,7 +415,7 @@ const PackingMaterials = () => {
                     )}
                     <span className="bg-white text-gray-800 text-sm font-bold tracking-wider uppercase rounded-lg px-3 py-1.5"></span>
                   </div>
-                </a>
+                </Link>
 
                 <div className="flex justify-between items-start gap-2 px-2">
                   <div className="flex flex-col">
