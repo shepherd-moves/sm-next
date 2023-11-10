@@ -158,7 +158,8 @@ function Navbar() {
           <Link href="/">
             <Image
               src="/sm-logo-white.svg"
-              className="h-[150px] w-[100px]"
+              width={150}
+              height={100}
               alt="Tuckshop"
             />
           </Link>

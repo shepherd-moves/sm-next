@@ -7,7 +7,7 @@ function Hero() {
   return (
     <>
       <section className="min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden   relative py-16 md:py-16 xl:py-30">
-        <motion.img
+        <motion.div
           animate={{
             opacity: 1,
           }}
@@ -21,20 +21,30 @@ function Hero() {
             duration: 0.5,
             ease: "easeInOut",
           }}
-          src="/sm-hero-bg.jpg"
-          alt="Photo by Fakurian Design"
-          className="w-full h-full object-cover object-center absolute inset-0"
-        />
+        >
+          <Image
+            src="/sm-hero-bg.jpg"
+            alt="Photo by Fakurian Design"
+            fill
+            className="w-full h-full object-cover object-center absolute inset-0"
+          />
+        </motion.div>
 
         <div className="bg-white mix-blend-normal opacity-75 absolute inset-0"></div>
         <div className="sm:max-w-2xl flex flex-col items-center relative p-4 ">
-          <motion.img
+          <motion.div
             initial={{ x: "100vw" }}
             animate={{ x: 0 }}
             transition={{ duration: 2, ease: "easeInOut" }}
-            src="/sm-logo-black.svg"
-            className="w-[440px] h-[250px] mb-4"
-          ></motion.img>
+          >
+            <Image
+              src="/sm-logo-black.svg"
+              alt="Shepherd Moves Logo"
+              width={440}
+              height={250}
+              className="mb-4"
+            ></Image>
+          </motion.div>
 
           <motion.h3
             animate={{
