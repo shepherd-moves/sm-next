@@ -21,7 +21,6 @@ function Hero() {
             ease: "easeInOut",
           }}
           src="/sm-hero-bg.jpg"
-          loading="lazy"
           alt="Photo by Fakurian Design"
           className="w-full h-full object-cover object-center absolute inset-0"
         />
@@ -33,7 +32,7 @@ function Hero() {
             animate={{ x: 0 }}
             transition={{ duration: 2, ease: "easeInOut" }}
             src="/sm-logo-black.svg"
-            className="w-[80%] mb-4"
+            className="w-[440px] h-[250px] mb-4"
           ></motion.img>
 
           <motion.h3

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useCycle, AnimatePresence } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
+import { MdEmail, MdPhone } from "react-icons/md";
 
 const links = [
   { name: "Home", to: "/", id: 1 },
@@ -34,6 +35,26 @@ const sideVariants = {
       staggerDirection: 1,
     },
   },
+};
+
+const handleOpenOutlook = () => {
+  const emailAddress = "bookings@shepherdmoves.com.au";
+  const subject = "Booking Request";
+
+  const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
+    subject
+  )}`;
+
+  // Open the default email client with the pre-filled email.
+  window.location.href = mailtoLink;
+};
+
+const handleOpenPhone = () => {
+  const phoneNumber = "1234567890"; // Replace with the phone number you want to call.
+  const telLink = `tel:${phoneNumber}`;
+
+  // Open the phone app with the specified phone number.
+  window.location.href = telLink;
 };
 
 function Navbar() {
@@ -140,6 +161,26 @@ function Navbar() {
               alt="Tuckshop"
             />
           </Link>
+          <div className="flex gap-4">
+            <button
+              type="button"
+              onClick={handleOpenOutlook}
+              className="text-black bg-white hover:bg-gray-300 font-medium rounded-full text-lg p-3 text-center inline-flex items-center"
+            >
+              <MdEmail size={18} />
+              <span className="sr-only">Email Us Button</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={handleOpenPhone}
+              className="text-black bg-white hover:bg-gray-300 font-medium rounded-full text-lg p-3 text-center inline-flex items-center"
+            >
+              <MdPhone size={18} />
+              <span className="sr-only">Call Us Button</span>
+            </button>
+          </div>
+
           <ul className="main-nav hidden md:flex gap-2 text-l font-semibold text-inter text-white capitalize items-center">
             <li className="">
               <Link href="/">Home</Link>
@@ -213,7 +254,7 @@ function Navbar() {
 
             <Link
               href="/quote"
-              className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-200 ease-in-out"
+              className="bg-red-500 text-white font-semibold px-4 py-6 rounded-lg hover:bg-red-700 transition duration-200 ease-in-out"
             >
               Get an Estimate!
             </Link>
