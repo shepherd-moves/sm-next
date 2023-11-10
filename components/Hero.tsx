@@ -25,6 +25,7 @@ function Hero() {
           <Image
             src="/sm-hero-bg.jpg"
             alt="Shepherd Moves Logo"
+            loading="eager"
             fill
             className="w-full h-full object-cover object-center absolute inset-0"
           />
@@ -40,6 +41,7 @@ function Hero() {
             <Image
               src="/sm-logo-black.svg"
               alt="Shepherd Moves Logo"
+              loading="eager"
               width={440}
               height={250}
               className="mb-4"
