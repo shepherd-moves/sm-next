@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import Link from "next/link";
+import Head from "next/head";
 import Reviews from "../components/Reviews";
 import axios from "axios";
 import { AiFillHome } from "react-icons/ai";
@@ -74,56 +75,78 @@ export async function getStaticProps() {
 
 export default function Home({ reviews }: any) {
   return (
-    <div>
-      <Hero />
-      <div className="bg-white py-6 sm:py-8 lg:py-12">
-        <div className="max-w-screen-2xl px-4 md:px-8 mx-auto ">
-          <div className="mb-10 md:mb-16">
-            <h2 className="text-black text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
-              Our Services
-            </h2>
+    <>
+      <Head>
+        <title>Shepherd Moves | Home</title>
+        <meta
+          name="description"
+          content="Shepherd Moves offers professional moving services to ensure a smooth transition for your home or business. Discover our reliable and efficient solutions."
+        />
+        <meta
+          property="og:title"
+          content="Shepherd Moves | Your Trusted Moving Partner"
+        />
+        <meta
+          property="og:description"
+          content="Shepherd Moves offers professional moving services to ensure a smooth transition for your home or business. Discover our reliable and efficient solutions."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.shepherdmoves.com.au/" />
+        <meta property="og:image" content="/sm-logo-black.svg" />
+        <link rel="icon" href="/sm-logo-black.svg" />
+        {/* Add additional tags as needed for fonts, styles, etc. */}
+      </Head>
+      <div>
+        <Hero />
+        <div className="bg-white py-6 sm:py-8 lg:py-12">
+          <div className="max-w-screen-2xl px-4 md:px-8 mx-auto ">
+            <div className="mb-10 md:mb-16">
+              <h2 className="text-black text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">
+                Our Services
+              </h2>
 
-            <p className="max-w-screen-md text-black md:text-lg text-center mx-auto">
-              Shepherd Moves offers a wide range of moving services for every
-              time of move including Residential Homes and Apartments, House
-              Staging and Styling, Office Relocations, Warehouse Relocations and
-              Interstate Relocations
-            </p>
-          </div>
+              <p className="max-w-screen-md text-black md:text-lg text-center mx-auto">
+                Shepherd Moves offers a wide range of moving services for every
+                time of move including Residential Homes and Apartments, House
+                Staging and Styling, Office Relocations, Warehouse Relocations
+                and Interstate Relocations
+              </p>
+            </div>
 
-          <div
-            id="services"
-            className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16"
-          >
-            {features.map((feature) => (
-              <div key={feature.name} className="flex flex-col items-center">
-                <feature.icon className="text-4xl text-black mb-4" />
-                <p className=" text-black text-lg md:text-xl font-semibold text-center mb-2">
-                  {feature.name}
-                </p>
-                <p className="text-black text-center mb-2 line-clamp-2">
-                  {feature.description}
-                </p>
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Link
-                    aria-labelledby={feature.aria_text}
-                    href={`our-services/${feature.name
-                      .replace(/\s/g, "-")
-                      .toLowerCase()}`}
-                    className="text-black font-bold"
+            <div
+              id="services"
+              className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16"
+            >
+              {features.map((feature) => (
+                <div key={feature.name} className="flex flex-col items-center">
+                  <feature.icon className="text-4xl text-black mb-4" />
+                  <p className=" text-black text-lg md:text-xl font-semibold text-center mb-2">
+                    {feature.name}
+                  </p>
+                  <p className="text-black text-center mb-2 line-clamp-2">
+                    {feature.description}
+                  </p>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                   >
-                    More
-                  </Link>
-                </motion.div>
-              </div>
-            ))}
+                    <Link
+                      aria-labelledby={feature.aria_text}
+                      href={`our-services/${feature.name
+                        .replace(/\s/g, "-")
+                        .toLowerCase()}`}
+                      className="text-black font-bold"
+                    >
+                      More
+                    </Link>
+                  </motion.div>
+                </div>
+              ))}
+            </div>
           </div>
+          <Reviews reviews={reviews} />
         </div>
-        <Reviews reviews={reviews} />
       </div>
-    </div>
+    </>
   );
 }
