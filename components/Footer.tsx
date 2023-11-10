@@ -26,7 +26,12 @@ function Footer() {
   return (
     <>
       {showButton && (
-        <Link className="back-to-top-button" href="#" scroll={true}>
+        <Link
+          className="back-to-top-button"
+          href="#"
+          scroll={true}
+          aria-label="Back to Top button"
+        >
           Back to top
         </Link>
       )}
@@ -69,7 +74,10 @@ function Footer() {
             ></Link>
           </nav>
           <div className="flex gap-4">
-            <Link className="" href={"https://www.facebook.com/shepherdmoves/"}>
+            <Link
+              aria-label="Follow Shepherd Moves on Facebook"
+              href={"https://www.facebook.com/shepherdmoves/"}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -80,10 +88,16 @@ function Footer() {
                 <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
               </svg>
             </Link>
-            <Link href={"https://www.tiktok.com/@shepherdmoves"}>
+            <Link
+              aria-label="Follow Shepherd Moves on TikTok"
+              href={"https://www.tiktok.com/@shepherdmoves"}
+            >
               <FaTiktok className=" fill-white tiktok-btn w-[24px] h-[24px]" />
             </Link>
-            <Link href={"https://www.instagram.com/shepherdmoves/"}>
+            <Link
+              aria-label="Follow Shepherd Moves on Instagram"
+              href={"https://www.instagram.com/shepherdmoves/"}
+            >
               <FaInstagram className="fill-white insta-btn w-[24px] h-[24px]" />
             </Link>
           </div>
