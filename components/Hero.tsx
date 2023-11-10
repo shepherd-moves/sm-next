@@ -24,7 +24,7 @@ function Hero() {
         >
           <Image
             src="/sm-hero-bg.jpg"
-            alt="Photo by Fakurian Design"
+            alt="Shepherd Moves Logo"
             fill
             className="w-full h-full object-cover object-center absolute inset-0"
           />
