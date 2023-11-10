@@ -11,7 +11,7 @@ function Reviews({ reviews }: any) {
           {reviews.result.reviews.map((review: any) => {
             return (
               <div className="flex flex-col border rounded-lg gap-3 p-4 md:p-6">
-                <div>
+                <div key={review.author_name}>
                   <span className="block text-sm md:text-base font-bold">
                     {review.author_name}
                   </span>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import "react-before-after-slider-component/dist/build.css";
 import { FaCheck } from "react-icons/fa";
@@ -30,6 +31,14 @@ function Residential() {
 
   return (
     <>
+      <Head>
+        <title>Residential Homes and Apartments</title>
+        <meta property="og:title" content="Residential Homes and Apartments" />
+        <meta
+          name="description"
+          content="Settle into your new home with ease with Shepherd Moves' Residential Relocation services. Trusted movers for homes and apartments. Plan your perfect move with us today."
+        />
+      </Head>
       <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div className="flex flex-col gap-10 lg:flex-row justify-between ">
           <div className="w-full lg:w-8/12 ">

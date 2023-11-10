@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import AccordionItem from "../../components/AccordionItem";
-import { motion } from "framer-motion";
-import { FaCrown } from "react-icons/fa";
 
 const data = [
   {
@@ -89,6 +88,16 @@ function About() {
   const [questions, setQuestions]: any = useState(data);
   return (
     <>
+      <div>
+        <Head>
+          <title>About Us</title>
+          <meta property="og:title" content="About Us" />
+          <meta
+            name="description"
+            content="Based in the bustling city of Melbourne, Shepherd Moves is a moving company committed to providing a stress-free and seamless experience for our customers"
+          />
+        </Head>
+      </div>
       {/*About Section*/}
       <section>
         <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 lg:grid">

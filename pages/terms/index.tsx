@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 
 const terms = [
   {
@@ -76,6 +77,14 @@ const terms = [
 function TermsOfService() {
   return (
     <>
+      <Head>
+        <title>Terms and Conditions | Shepherd Moves</title>
+        <meta
+          name="description"
+          content="Review the Terms and Conditions of Shepherd Moves to understand your rights and responsibilities when using our services. Stay informed about our policies for a smooth moving experience."
+        />
+      </Head>
+
       <div className=" p-8 sm:bg-white flex-col container max-w-xl mx-auto  justify-center max-h[100vh]">
         <h2 className="text-black text-2xl lg:text-3xl mt-8 font-bold text-center mb-4 md:mb-6">
           Terms of Services

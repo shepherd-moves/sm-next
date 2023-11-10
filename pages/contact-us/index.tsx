@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { send } from "emailjs-com";
@@ -36,6 +37,16 @@ function ContactUs() {
 
   return (
     <>
+      <div>
+        <Head>
+          <title>Contact</title>
+          <meta property="og:title" content="Contact" />
+          <meta
+            name="description"
+            content="Reach out to us for any queries or support. Contact Shepherd Moves via email at bookings@shepherdmoves.com.au, phone at 0391128572, or fill out our online form. We're here to help with your moving needs in Melbourne."
+          />
+        </Head>
+      </div>
       {submitted ? (
         <div className=" p-8 sm:bg-white flex-col  container max-w-xl mx-auto  justify-center h-auto">
           <h1 className="text-4xl font-bold text-center">Thank you!</h1>

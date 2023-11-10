@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context: any) {
   const slug = context.params.slug;
-  console.log(slug);
+  // console.log(slug);
   const res = await client.fetch(singlePostquery, { slug });
   return {
     props: {

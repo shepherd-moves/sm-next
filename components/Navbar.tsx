@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useCycle, AnimatePresence } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
@@ -155,7 +156,7 @@ function Navbar() {
       <nav className="bg-black">
         <div className="flex justify-between items-center h-24 max-w-5xl mx-auto px-4">
           <Link href="/">
-            <img
+            <Image
               src="/sm-logo-white.svg"
               className="h-[150px] w-[100px]"
               alt="Tuckshop"
