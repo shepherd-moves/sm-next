@@ -107,7 +107,6 @@ function Blog({ posts }: Props) {
           >
             <Image
               src={urlFor(post.mainImage).url()!}
-              loading="lazy"
               width={640}
               height={480}
               alt="Photo by Minh Pham"
@@ -146,7 +145,6 @@ function Blog({ posts }: Props) {
                 <div className="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
                   <Image
                     src={urlFor(post.author.image).url()!}
-                    loading="lazy"
                     alt="Photo by Brock Wegner"
                     className="w-full h-full object-cover object-center"
                   />

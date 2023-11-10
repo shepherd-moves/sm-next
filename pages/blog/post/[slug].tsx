@@ -59,7 +59,6 @@ function BlogPost({ post }: any) {
           <div className="w-14 h-14 shrink-0 bg-gray-100 rounded-full overflow-hidden">
             <Image
               src={urlFor(post.author.image).url()!}
-              loading="lazy"
               alt="Photo by Brock Wegner"
               className="w-full h-full object-cover object-center"
             />
