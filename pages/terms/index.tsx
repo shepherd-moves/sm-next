@@ -117,6 +117,7 @@ function TermsOfService() {
         ))}
         <div className="flex justify-center">
           <button
+            aria-label="Button to open Terms of Service document"
             className="btn mb-6 bg-black text-white "
             onClick={() => {
               window.open(

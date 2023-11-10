@@ -131,6 +131,7 @@ function Navbar() {
           <div className="order-2 sm:order-none w-1/12 sm:w-auto flex justify-end items-start sm:absolute sm:right-0 sm:mr-1 xl:mr-3">
             <button
               type="button"
+              aria-label="Show Banner Button"
               className="text-black hover:text-indigo-100 active:text-indigo-200 transition duration-100"
               onClick={() => setShowBanner(false)}
             >
@@ -166,6 +167,7 @@ function Navbar() {
           <div className="flex gap-4">
             <button
               type="button"
+              aria-label="Contact by email button"
               onClick={handleOpenOutlook}
               className="text-black bg-white hover:bg-gray-300 font-medium rounded-full text-lg p-3 text-center inline-flex items-center"
             >
@@ -175,6 +177,7 @@ function Navbar() {
 
             <button
               type="button"
+              aria-label="Contact by phone button"
               onClick={handleOpenPhone}
               className="text-black bg-white hover:bg-gray-300 font-medium rounded-full text-lg p-3 text-center inline-flex items-center"
             >
@@ -261,7 +264,10 @@ function Navbar() {
               Get an Estimate!
             </Link>
           </ul>
-          <button className="md:hidden">
+          <button
+            className="md:hidden"
+            aria-label="Open/Close Mobile Menu Button"
+          >
             {isOpen ? (
               <AiOutlineClose
                 className="fill-white"

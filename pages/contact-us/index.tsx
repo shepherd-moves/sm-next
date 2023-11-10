@@ -188,6 +188,7 @@ function ContactUs() {
 
             <div className="sm:col-span-2 flex justify-between items-center">
               <button
+                aria-label="Submit for button"
                 type="submit"
                 className="inline-block bg-black hover:bg-gray-600 active:bg-gray-600 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
               >
