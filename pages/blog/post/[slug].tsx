@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
 import { PortableText } from "@portabletext/react";
@@ -56,7 +57,7 @@ function BlogPost({ post }: any) {
       <div className="flex justify-between items-end mt-auto mb-2">
         <div className="flex items-center gap-2">
           <div className="w-14 h-14 shrink-0 bg-gray-100 rounded-full overflow-hidden">
-            <img
+            <Image
               src={urlFor(post.author.image).url()!}
               loading="lazy"
               alt="Photo by Brock Wegner"

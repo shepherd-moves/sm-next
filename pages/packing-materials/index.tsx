@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 const packingMaterials = [
   {
@@ -394,7 +395,7 @@ const PackingMaterials = () => {
             {packingMaterials.map((item) => (
               <div>
                 <a className="group h-80 block bg-white rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3">
-                  <img
+                  <Image
                     src={item.image}
                     loading="lazy"
                     alt={item.title}

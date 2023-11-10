@@ -144,7 +144,7 @@ function Blog({ posts }: Props) {
             <div className="flex justify-between items-end mt-auto">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
-                  <img
+                  <Image
                     src={urlFor(post.author.image).url()!}
                     loading="lazy"
                     alt="Photo by Brock Wegner"
