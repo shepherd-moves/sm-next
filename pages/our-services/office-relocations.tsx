@@ -43,6 +43,8 @@ function Office() {
           <div className="w-full lg:w-8/12 ">
             <Image
               className="object-contain  md:w-[633px] h-[400px] md:object-cover md:rounded-lg"
+              width={633}
+              height={400}
               src="/office-hero.jpg"
               alt="Man standing beside a truck"
             />

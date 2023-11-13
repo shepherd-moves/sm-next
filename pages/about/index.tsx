@@ -107,6 +107,8 @@ function About() {
               <Image
                 className="w-[633px] h-[400px] object-cover rounded-lg"
                 src="/about-hero.png"
+                width={633}
+                height={400}
                 alt="Man standing beside a truck"
               />
             </div>

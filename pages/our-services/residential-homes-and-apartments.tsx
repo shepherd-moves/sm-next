@@ -46,6 +46,8 @@ function Residential() {
             <Image
               className="object-contain  md:w-[633px] h-[400px] md:object-cover md:rounded-lg"
               src="/truck-with-logo.jpg"
+              width={633}
+              height={400}
               alt="Man standing beside a truck"
             />
           </div>

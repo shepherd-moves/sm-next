@@ -406,8 +406,9 @@ const PackingMaterials = () => {
                   className="group h-80 block bg-white rounded-lg overflow-hidden shadow-lg relative mb-2 lg:mb-3"
                 >
                   <Image
-                    src={item.image}
+                    src={`/${item.image}`}
                     alt={item.title}
+                    fill={true}
                     className="w-full h-full object-cover scale-50 object-center group-hover:scale-90 transition duration-500 ease-in-out"
                   />
 

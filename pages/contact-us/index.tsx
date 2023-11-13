@@ -201,11 +201,11 @@ function ContactUs() {
         </div>
       )}
       <div className="flex justify-center items-center">
-        <Image
+        {/* <Image
           src="/sm_maps.png"
           className=" w-[95%] mb-8 rounded-lg mt-8"
           alt="Image of Shepherd Moves office location on Google Maps"
-        ></Image>
+        ></Image> */}
       </div>
     </>
   );
