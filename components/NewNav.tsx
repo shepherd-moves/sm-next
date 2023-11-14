@@ -7,7 +7,7 @@ import { FaWarehouse, FaMapMarkedAlt } from "react-icons/fa";
 import { BsBookshelf } from "react-icons/bs";
 import { Bars3Icon } from "@heroicons/react/20/solid";
 import { XMarkIcon } from "@heroicons/react/20/solid";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdPhone } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -26,7 +26,7 @@ const handleOpenOutlook = () => {
 };
 
 const handleOpenPhone = () => {
-  const phoneNumber = "1234567890"; // Replace with the phone number you want to call.
+  const phoneNumber = "0391128572"; // Replace with the phone number you want to call.
   const telLink = `tel:${phoneNumber}`;
 
   // Open the phone app with the specified phone number.
@@ -95,15 +95,15 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-black">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link aria-label="Shepherd Moves logo in white" href="/">
             <Image
-              src="/sm-logo-black.svg"
+              src="/sm-logo-white.svg"
               width={150}
               height={100}
               alt="Tuckshop"
@@ -113,7 +113,7 @@ export default function Example() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -122,10 +122,10 @@ export default function Example() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
               Our Services
               <ChevronDownIcon
-                className="h-5 w-5 flex-none text-gray-400"
+                className="h-5 w-5 flex-none text-white"
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -187,35 +187,51 @@ export default function Example() {
 
           <Link
             href="/about"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-white"
           >
             About Us
           </Link>
           <Link
             href="/contact-us"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-white"
           >
             Contact
           </Link>
           <Link
             href="/terms"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-white"
           >
             Terms of Service
           </Link>
           <a
             href="/packing-materials"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 text-white"
           >
             Packing Materials
           </a>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-2">
           <button
             type="button"
             className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
           >
             <Link href="/quote">Get an Estimate</Link>
+          </button>
+          <button
+            type="button"
+            onClick={handleOpenPhone}
+            className=" flex items-center  gap-1 text-black bg-white hover:bg-black hover:text-white  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          >
+            <MdPhone /> {/* Icon */}
+            <Link href="/quote">Call Us</Link>
+          </button>
+          <button
+            type="button"
+            onClick={handleOpenOutlook}
+            className=" flex items-center  gap-1 text-black bg-white hover:bg-black hover:text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          >
+            <MdEmail /> {/* Icon */}
+            <Link href="/quote">Email Us</Link>
           </button>
         </div>
       </nav>
@@ -272,33 +288,33 @@ export default function Example() {
                     </>
                   )}
                 </Disclosure>
-                <a
-                  href="#"
+                <Link
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About Us
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/contact-us"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/terms"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Terms of Service
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/packing-materials"
                   className="-mx-3 block rounded-lg px-3  text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Packing Materials
-                </a>
+                </Link>
                 <div className="grid grid-cols-2  bg-gray-50">
                   {callsToAction.map((item) => (
-                    <a
+                    <Link
                       onClick={item.onClick}
                       key={item.name}
                       href={item.href}
@@ -309,7 +325,7 @@ export default function Example() {
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
