@@ -282,7 +282,7 @@ function Navbar() {
             </li>
 
             <Link
-              aria-label="Go to Quote page"
+              aria-label="Get an Estimate!"
               href="/quote"
               className="bg-red-500 text-white font-semibold px-4 py-6 rounded-lg hover:bg-red-700 transition duration-200 ease-in-out"
             >

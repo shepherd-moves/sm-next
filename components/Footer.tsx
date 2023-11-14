@@ -39,7 +39,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-b gap-4 py-6">
           <nav className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-6">
             <Link
-              aria-label="Go to About page button"
+              aria-label="About Us"
               href="/about"
               className="text-white hover:text-gray-300 active:text-indigo-600 transition duration-100"
             >
@@ -111,7 +111,7 @@ function Footer() {
         <div className="flex-col mt-4">
           <div className="text-white text-md text-center mb-4">
             <Link
-              aria-label="Go to Jordan Nelson's portfolio site"
+              aria-label="Website created with ❤️ by Jordan Nelson"
               href={"https://jordyn.vercel.app/"}
             >
               Website created with ❤️ by Jordan Nelson

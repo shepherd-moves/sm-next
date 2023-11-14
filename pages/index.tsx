@@ -210,7 +210,7 @@ export default function Home({ reviews }: any) {
                     className="text-center"
                   >
                     <Link
-                      aria-label={feature.aria_text}
+                      aria-label={feature.btn_description}
                       href={`our-services/${feature.name
                         .replace(/\s/g, "-")
                         .toLowerCase()}`}
