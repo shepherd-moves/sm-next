@@ -202,7 +202,7 @@ export default function Home({ reviews }: any) {
                     whileTap={{ scale: 0.9 }}
                   >
                     <Link
-                      aria-labelledby={feature.aria_text}
+                      aria-label={feature.aria_text}
                       href={`our-services/${feature.name
                         .replace(/\s/g, "-")
                         .toLowerCase()}`}
