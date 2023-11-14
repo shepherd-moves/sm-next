@@ -114,7 +114,7 @@ function Footer() {
               aria-label="Website created with ❤️ by Jordan Nelson"
               href={"https://jordyn.vercel.app/"}
             >
-              Website created with ❤️ by Jordan Nelson
+              Website created with ❤️ by JN Web Services
             </Link>
           </div>
           <div className="flex justify-center mt-[-30px]">
