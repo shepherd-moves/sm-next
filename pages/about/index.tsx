@@ -91,13 +91,18 @@ function About() {
     <>
       <div>
         <Head>
-          <title>About Us</title>
-          <meta property="og:title" content="About Us" />
+          <title>
+            About Shepherd Moves - Melbourne's Leading Furniture Removalists
+          </title>
           <meta
-            name="description"
-            content="Based in the bustling city of Melbourne, Shepherd Moves is a moving company committed to providing a stress-free and seamless experience for our customers"
+            property="og:title"
+            content="About Shepherd Moves - Melbourne's Leading Furniture Removalists"
           />
         </Head>
+        <meta
+          name="description"
+          content="Discover Shepherd Moves, a premier furniture removalist in Melbourne. Learn about our experienced team, efficient services, and customer-focused approach."
+        />
       </div>
       {/*About Section*/}
       <section>
@@ -109,7 +114,7 @@ function About() {
                 src="/about-hero.png"
                 width={633}
                 height={400}
-                alt="Man standing beside a truck"
+                alt="Shepherd Moves friendly team beside one of our 4-tonne trucks"
               />
             </div>
             <div className="w-full lg:w-8/12 flex flex-col ">
@@ -129,12 +134,32 @@ function About() {
                 <p className="mt-2">
                   We will always be on time and will do everything in our power
                   to make sure your move goes as smoothly as possible. We offer
-                  a range of services to meet the needs of our customers,
-                  including packing, transportation, and storage solutions. Our
-                  team is fully licensed and insured, so you can trust that your
-                  belongings are in good hands when you choose to work with us.
-                  If you're planning a move in the Melbourne area, we would love
-                  to hear from you. Contact us to learn more about our services
+                  a range of{" "}
+                  <Link
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href="/our-services"
+                  >
+                    services
+                  </Link>{" "}
+                  to meet the needs of our customers, including packing,
+                  transportation, and storage solutions. Our team is fully
+                  licensed and insured, so you can trust that your belongings
+                  are in good hands when you choose to work with us. If you're
+                  planning a move in the Melbourne area, we would love to hear
+                  from you.{" "}
+                  <Link
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href="/contact-us"
+                  >
+                    Contact us
+                  </Link>{" "}
+                  to learn more about our{" "}
+                  <Link
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href="/our-services"
+                  >
+                    services
+                  </Link>{" "}
                   and to schedule your move with Shepherd Moves
                 </p>
               </p>
@@ -465,8 +490,20 @@ function About() {
 
             <p className="max-w-screen-md text-black md:text-lg text-center mx-auto">
               We've compiled a list of the most frequently asked questions about
-              our services. If you have any other questions, please feel free to
-              contact us.
+              our{" "}
+              <Link
+                className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                href="/our-services"
+              >
+                services.
+              </Link>{" "}
+              If you have any other questions, please feel free to{" "}
+              <Link
+                href="/contact-us"
+                className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+              >
+                contact us.
+              </Link>
             </p>
           </div>
           <section className="flex flex-col max-w-screen-sm border-t mx-auto">
