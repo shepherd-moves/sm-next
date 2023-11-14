@@ -62,7 +62,7 @@ function ContactUs() {
           </div>
           <div className="flex-col">
             <h1 className="text-lg font-bold">Phone</h1>
-            <p className="text-sm">+61 428 439 182</p>
+            <p className="text-sm">0391128572</p>
           </div>
           <div className="flex-col">
             <h1 className="text-lg font-bold">Email</h1>
