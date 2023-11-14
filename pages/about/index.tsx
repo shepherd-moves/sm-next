@@ -268,7 +268,7 @@ function About() {
                   a range of{" "}
                   <Link
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    href="/our-services"
+                    href="/our-services/residential-homes-and-apartments"
                   >
                     services
                   </Link>{" "}
@@ -287,7 +287,7 @@ function About() {
                   to learn more about our{" "}
                   <Link
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    href="/our-services"
+                    href="/our-services/residential-homes-and-apartments"
                   >
                     services
                   </Link>{" "}
