@@ -14,7 +14,11 @@ function AccordionItem({ title, info }: any) {
           {title}
         </span>
 
-        <button className="text-black" onClick={() => setShowInfo(!showInfo)}>
+        <button
+          aria-label="Open/Close Accordion Item Button"
+          className="text-black"
+          onClick={() => setShowInfo(!showInfo)}
+        >
           {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>
       </div>

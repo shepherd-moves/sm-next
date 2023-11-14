@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { send } from "emailjs-com";
@@ -36,6 +37,16 @@ function ContactUs() {
 
   return (
     <>
+      <div>
+        <Head>
+          <title>Contact</title>
+          <meta property="og:title" content="Contact" />
+          <meta
+            name="description"
+            content="Reach out to us for any queries or support. Contact Shepherd Moves via email at bookings@shepherdmoves.com.au, phone at 0391128572, or fill out our online form. We're here to help with your moving needs in Melbourne."
+          />
+        </Head>
+      </div>
       {submitted ? (
         <div className=" p-8 sm:bg-white flex-col  container max-w-xl mx-auto  justify-center h-auto">
           <h1 className="text-4xl font-bold text-center">Thank you!</h1>
@@ -51,7 +62,7 @@ function ContactUs() {
           </div>
           <div className="flex-col">
             <h1 className="text-lg font-bold">Phone</h1>
-            <p className="text-sm">+61 428 439 182</p>
+            <p className="text-sm">0391128572</p>
           </div>
           <div className="flex-col">
             <h1 className="text-lg font-bold">Email</h1>
@@ -177,6 +188,7 @@ function ContactUs() {
 
             <div className="sm:col-span-2 flex justify-between items-center">
               <button
+                aria-label="Submit for button"
                 type="submit"
                 className="inline-block bg-black hover:bg-gray-600 active:bg-gray-600 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3"
               >
@@ -189,11 +201,11 @@ function ContactUs() {
         </div>
       )}
       <div className="flex justify-center items-center">
-        <img
+        {/* <Image
           src="/sm_maps.png"
           className=" w-[95%] mb-8 rounded-lg mt-8"
           alt="Image of Shepherd Moves office location on Google Maps"
-        ></img>
+        ></Image> */}
       </div>
     </>
   );

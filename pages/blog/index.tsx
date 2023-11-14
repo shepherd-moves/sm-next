@@ -101,28 +101,28 @@ function Blog({ posts }: Props) {
     <div className="grid p-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
       {posts.map((post) => (
         <div className="flex flex-col bg-white border rounded-lg overflow-hidden shadow-xl">
-          <a
+          <Link
+            aria-label={post.title}
             href={`/blog/post/${post.slug.current}`}
             className="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative"
           >
             <Image
               src={urlFor(post.mainImage).url()!}
-              loading="lazy"
               width={640}
               height={480}
               alt="Photo by Minh Pham"
               className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
             />
-          </a>
+          </Link>
 
           <div className="flex flex-col flex-1 p-4 sm:p-6">
             <h2 className="text-gray-800 text-lg font-semibold mb-2">
-              <a
+              <Link
                 href="#"
                 className="hover:text-indigo-500 active:text-indigo-600 transition duration-100"
               >
                 {post.title}
-              </a>
+              </Link>
             </h2>
 
             <p className="text-gray-500 mb-8 line-clamp-4">
@@ -144,9 +144,8 @@ function Blog({ posts }: Props) {
             <div className="flex justify-between items-end mt-auto">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 shrink-0 bg-gray-100 rounded-full overflow-hidden">
-                  <img
+                  <Image
                     src={urlFor(post.author.image).url()!}
-                    loading="lazy"
                     alt="Photo by Brock Wegner"
                     className="w-full h-full object-cover object-center"
                   />

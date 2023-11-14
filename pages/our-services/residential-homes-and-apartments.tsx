@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import "react-before-after-slider-component/dist/build.css";
 import { FaCheck } from "react-icons/fa";
 
@@ -30,12 +32,22 @@ function Residential() {
 
   return (
     <>
+      <Head>
+        <title>Residential Homes and Apartments</title>
+        <meta property="og:title" content="Residential Homes and Apartments" />
+        <meta
+          name="description"
+          content="Settle into your new home with ease with Shepherd Moves' Residential Relocation services. Trusted movers for homes and apartments. Plan your perfect move with us today."
+        />
+      </Head>
       <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div className="flex flex-col gap-10 lg:flex-row justify-between ">
           <div className="w-full lg:w-8/12 ">
-            <img
+            <Image
               className="object-contain  md:w-[633px] h-[400px] md:object-cover md:rounded-lg"
               src="/truck-with-logo.jpg"
+              width={633}
+              height={400}
               alt="Man standing beside a truck"
             />
           </div>
@@ -73,6 +85,9 @@ function Residential() {
                   {relatedServices.map((service) => (
                     <li key={service}>
                       <Link
+                        aria-label={`Go to ${service
+                          .replace(/\s/g, "-")
+                          .toLowerCase()} page`}
                         href={`${service.replace(/\s/g, "-").toLowerCase()}`}
                         className="text-black font-semibold text-sm line-height-2.5 mr-4 hover:text-gray-500"
                       >

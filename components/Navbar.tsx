@@ -1,9 +1,11 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useCycle, AnimatePresence } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
+import { MdEmail, MdPhone } from "react-icons/md";
 
 const links = [
   { name: "Home", to: "/", id: 1 },
@@ -34,6 +36,26 @@ const sideVariants = {
       staggerDirection: 1,
     },
   },
+};
+
+const handleOpenOutlook = () => {
+  const emailAddress = "bookings@shepherdmoves.com.au";
+  const subject = "Booking Request";
+
+  const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
+    subject
+  )}`;
+
+  // Open the default email client with the pre-filled email.
+  window.location.href = mailtoLink;
+};
+
+const handleOpenPhone = () => {
+  const phoneNumber = "1234567890"; // Replace with the phone number you want to call.
+  const telLink = `tel:${phoneNumber}`;
+
+  // Open the phone app with the specified phone number.
+  window.location.href = telLink;
 };
 
 function Navbar() {
@@ -90,7 +112,11 @@ function Navbar() {
                 <br />
                 <br />
                 You will also be able to buy{" "}
-                <Link href="/packing-materials" className="font-bold">
+                <Link
+                  aria-label="Go to Paking Materials page"
+                  href="/packing-materials"
+                  className="font-bold"
+                >
                   packing supplies
                 </Link>{" "}
                 from our store located in the same facility!
@@ -109,6 +135,7 @@ function Navbar() {
           <div className="order-2 sm:order-none w-1/12 sm:w-auto flex justify-end items-start sm:absolute sm:right-0 sm:mr-1 xl:mr-3">
             <button
               type="button"
+              aria-label="Show Banner Button"
               className="text-black hover:text-indigo-100 active:text-indigo-200 transition duration-100"
               onClick={() => setShowBanner(false)}
             >
@@ -133,22 +160,50 @@ function Navbar() {
 
       <nav className="bg-black">
         <div className="flex justify-between items-center h-24 max-w-5xl mx-auto px-4">
-          <Link href="/">
-            <img
+          <Link aria-label="Shepherd Moves logo in white" href="/">
+            <Image
               src="/sm-logo-white.svg"
-              className="h-[150px] w-[100px]"
+              width={150}
+              height={100}
               alt="Tuckshop"
             />
           </Link>
+          <div className="flex gap-4">
+            <button
+              type="button"
+              aria-label="Contact by email button"
+              onClick={handleOpenOutlook}
+              className="text-black bg-white hover:bg-gray-300 font-medium rounded-full text-lg p-3 text-center inline-flex items-center"
+            >
+              <MdEmail size={18} />
+              <span className="sr-only">Email Us Button</span>
+            </button>
+
+            <button
+              type="button"
+              aria-label="Contact by phone button"
+              onClick={handleOpenPhone}
+              className="text-black bg-white hover:bg-gray-300 font-medium rounded-full text-lg p-3 text-center inline-flex items-center"
+            >
+              <MdPhone size={18} />
+              <span className="sr-only">Call Us Button</span>
+            </button>
+          </div>
+
           <ul className="main-nav hidden md:flex gap-2 text-l font-semibold text-inter text-white capitalize items-center">
             <li className="">
-              <Link href="/">Home</Link>
+              <Link aria-label="Go to Home page" href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link aria-label="Go to About Us page" href="/about">
+                About Us
+              </Link>
             </li>
             <li className="relative">
               <Link
+                aria-label="Link to show Services submenu"
                 className=""
                 onMouseEnter={() => setShowSubmenu(true)}
                 href="/#service"
@@ -163,36 +218,42 @@ function Navbar() {
                   onMouseLeave={() => setShowSubmenu(false)}
                 >
                   <Link
+                    aria-label="Go to Residential Homes and Apartments page"
                     className="block w-[250px] px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/residential-homes-and-apartments"
                   >
                     Residential Homes and Apartments
                   </Link>
                   <Link
+                    aria-label="Go to House Staging and Styling page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/house-staging-and-styling"
                   >
                     House Staging and Styling
                   </Link>
                   <Link
+                    aria-label="Go to Office Relocations page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/office-relocations"
                   >
                     Office Relocations
                   </Link>
                   <Link
+                    aria-label="Go to Warehouse Relocations page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/warehouse-relocations"
                   >
                     Warehouse Relocations
                   </Link>
                   <Link
+                    aria-label="Go to Interstate Relocations page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/interstate-relocations"
                   >
                     Interstate Relocations
                   </Link>
                   <Link
+                    aria-label="Go to Racking Solutions page"
                     className="block px-4 py-2 text-black hover:bg-gray-200"
                     href="/our-services/racking-solutions"
                   >
@@ -202,23 +263,36 @@ function Navbar() {
               )}
             </li>
             <li>
-              <Link href="/contact-us">Contact</Link>
+              <Link aria-label="Go to Contact Us page" href="/contact-us">
+                Contact
+              </Link>
             </li>
             <li>
-              <Link href="/terms">Terms of Service</Link>
+              <Link aria-label="Go to Terms of Service page" href="/terms">
+                Terms of Service
+              </Link>
             </li>
             <li>
-              <Link href="/packing-materials">Packing Materials</Link>
+              <Link
+                aria-label="Go to Packing Materials page"
+                href="/packing-materials"
+              >
+                Packing Materials
+              </Link>
             </li>
 
             <Link
+              aria-label="Get an Estimate!"
               href="/quote"
-              className="bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-200 ease-in-out"
+              className="bg-red-500 text-white font-semibold px-4 py-6 rounded-lg hover:bg-red-700 transition duration-200 ease-in-out"
             >
               Get an Estimate!
             </Link>
           </ul>
-          <button className="md:hidden">
+          <button
+            className="md:hidden"
+            aria-label="Open/Close Mobile Menu Button"
+          >
             {isOpen ? (
               <AiOutlineClose
                 className="fill-white"

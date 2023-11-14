@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import AccordionItem from "../../components/AccordionItem";
-import { motion } from "framer-motion";
-import { FaCrown } from "react-icons/fa";
 
 const data = [
   {
@@ -89,15 +89,163 @@ function About() {
   const [questions, setQuestions]: any = useState(data);
   return (
     <>
+      <div>
+        <Head>
+          <title>
+            About Shepherd Moves - Melbourne's Leading Furniture Removalists
+          </title>
+          <meta
+            property="og:title"
+            content="About Shepherd Moves - Melbourne's Leading Furniture Removalists"
+          />
+          <script type="application/ld+json">
+            {`
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate the job length on the day of the move?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The time starts when the truck arrives at the pickup location and ends after the bill has been paid rounded up to the nearest 15 minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much is the deposit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The deposit covers the minimum 2 hour charge plus the travel fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my deposit on cancelled or delayed jobs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deposits are non-refundable before 48 hours of the booked moving time. In the event of unforeseen circumstances, like positive covid tests or personal reasons, the deposit is transferred to a new date without extra charges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the boxes that are overfilled alright to be moved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Try to minimize overflow from boxes. They're easier and quicker to move if there are no protrusions. Ensure they are adequately taped and labelled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there any extra charges that you might add on the day of the move?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely not. We charge based on the items included in the estimate signed by you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What could make my move take longer than the estimated time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common factors include more items than originally listed, needing to disassemble and assemble furniture, not having an elevator booking for apartment moves, longer than expected access to either property, traffic, and weather conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I’m only moving 1 item, is there a lower fee for much smaller moves?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "15-minute increments are more accurate and the price reflects better for the work our teams complete. We try not to be like other companies that over-charge for their services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is ‘travel time’ and why is it an extra cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "‘Travel time’ is a separate and fixed fee on top of the moving time depending on how far you are from our office in Glen Iris. It is the time it takes for our team to get to you, and for them to travel back from the drop-off address."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have different sized trucks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we have trucks ranging in size from 20m3 to 45m3. To find out which size truck you need for your move, let us know exactly what you need moved, and we can recommend the right size."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you prepare for a fridge to be moved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ensure that the contents of the fridge have been emptied and properly bagged. Use masking tape on the doors to ensure there is no risk of them opening during the move. Tape the power cable to the back of the fridge to ensure no damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do you charge in 15-minute increments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "15-minute increments are more accurate and the price reflects better for each job. Some companies charge by the half hour and round it up, resulting in you paying for extra time not utilized."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you transport Pianos? Are there any extra charges for moving pianos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can transport specific pianos, and there is an extra charge. We only transport upright pianos. Anything larger than an upright piano is too susceptible to damages. When booking, let us know if a piano is included and we will provide options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you safely transport Artwork?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Artwork is wrapped in our heavy-duty moving blankets to ensure safety during transit. For particularly delicate pieces, we recommend specific packing materials, which we can supply if necessary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What days are best for moving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best time for a move is during the working week, Monday to Friday. We offer lower rates compared to weekends. In terms of time, the earlier in the day, the better, allowing you to settle in your new home sooner."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my furniture is damaged during my move?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our removalists are trained and experienced, but accidents may occur. In case of damage caused by handling or transporting, we offer repair, replacement, or compensation for any damages caused by us."
+          }
+        }
+        // Add more questions if necessary
+      ]
+    }
+  `}
+          </script>
+        </Head>
+        <meta
+          name="description"
+          content="Discover Shepherd Moves, a premier furniture removalist in Melbourne. Learn about our experienced team, efficient services, and customer-focused approach."
+        />
+      </div>
       {/*About Section*/}
       <section>
         <div className="bg-white 2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 lg:grid">
           <div className="flex flex-col gap-10 lg:flex-row justify-between ">
             <div className="w-full lg:w-8/12 ">
-              <img
+              <Image
                 className="w-[633px] h-[400px] object-cover rounded-lg"
                 src="/about-hero.png"
-                alt="Man standing beside a truck"
+                width={633}
+                height={400}
+                alt="Shepherd Moves friendly team beside one of our 4-tonne trucks"
               />
             </div>
             <div className="w-full lg:w-8/12 flex flex-col ">
@@ -117,12 +265,32 @@ function About() {
                 <p className="mt-2">
                   We will always be on time and will do everything in our power
                   to make sure your move goes as smoothly as possible. We offer
-                  a range of services to meet the needs of our customers,
-                  including packing, transportation, and storage solutions. Our
-                  team is fully licensed and insured, so you can trust that your
-                  belongings are in good hands when you choose to work with us.
-                  If you're planning a move in the Melbourne area, we would love
-                  to hear from you. Contact us to learn more about our services
+                  a range of{" "}
+                  <Link
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href="/our-services"
+                  >
+                    services
+                  </Link>{" "}
+                  to meet the needs of our customers, including packing,
+                  transportation, and storage solutions. Our team is fully
+                  licensed and insured, so you can trust that your belongings
+                  are in good hands when you choose to work with us. If you're
+                  planning a move in the Melbourne area, we would love to hear
+                  from you.{" "}
+                  <Link
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href="/contact-us"
+                  >
+                    Contact us
+                  </Link>{" "}
+                  to learn more about our{" "}
+                  <Link
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href="/our-services"
+                  >
+                    services
+                  </Link>{" "}
                   and to schedule your move with Shepherd Moves
                 </p>
               </p>
@@ -453,8 +621,20 @@ function About() {
 
             <p className="max-w-screen-md text-black md:text-lg text-center mx-auto">
               We've compiled a list of the most frequently asked questions about
-              our services. If you have any other questions, please feel free to
-              contact us.
+              our{" "}
+              <Link
+                className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                href="/our-services"
+              >
+                services.
+              </Link>{" "}
+              If you have any other questions, please feel free to{" "}
+              <Link
+                href="/contact-us"
+                className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+              >
+                contact us.
+              </Link>
             </p>
           </div>
           <section className="flex flex-col max-w-screen-sm border-t mx-auto">
